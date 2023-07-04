@@ -1,4 +1,4 @@
-import { SingleProperty } from './Property';
+import { SingleProps } from './Props';
 
 export const Relationship = {
   Mono: "Mono",
@@ -9,6 +9,4 @@ export const Relationship = {
 
 export type Relationship = typeof Relationship[keyof typeof Relationship] | undefined;
 
-export interface RelationshipProperty extends SingleProperty {
-  relationship: Relationship | undefined;
-}
+export interface RelationshipProperty extends SingleProps<Relationship> { };

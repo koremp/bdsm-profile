@@ -1,4 +1,4 @@
-import { MultipleProperty } from './Property';
+import { MultipleProps } from './Props';
 
 export const BDSM = {
   Bondage: "Bondage",
@@ -34,6 +34,4 @@ export const BDSM = {
 
 export type BDSM = typeof BDSM[keyof typeof BDSM];
 
-export interface BDSMProperty extends MultipleProperty {
-  bdsm: BDSM[];
-};
+export interface BDSMProperty extends MultipleProps<BDSM> { };

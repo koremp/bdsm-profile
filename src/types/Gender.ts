@@ -1,4 +1,4 @@
-import { SingleProperty } from './Property';
+import { SingleProps } from './Props';
 
 export const Gender = {
   Female: "Female",
@@ -14,6 +14,4 @@ export const Gender = {
 
 export type Gender = typeof Gender[keyof typeof Gender];
 
-export interface GenderProperty extends SingleProperty {
-  gender: Gender | undefined;
-};
+export interface GenderProperty extends SingleProps<Gender> { };

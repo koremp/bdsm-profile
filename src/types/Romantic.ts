@@ -1,4 +1,4 @@
-import { SingleProperty } from './Property';
+import { SingleProps } from './Props';
 
 export const Romantic = {
   Aromantic: "Aromantic",
@@ -14,6 +14,4 @@ export const Romantic = {
 
 export type Romantic = typeof Romantic[keyof typeof Romantic];
 
-export interface RomanticProperty extends SingleProperty {
-  romantic: Romantic | undefined;
-};
+export interface RomanticProperty extends SingleProps<Romantic> { };
