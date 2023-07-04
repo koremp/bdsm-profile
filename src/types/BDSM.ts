@@ -26,7 +26,7 @@ export const BDSM = {
   Degrader: "Degrader",
   Degradee: "Degradee",
   Ropebunny: "Rope Bunny",
-  Pray: "Pray",
+  Prey: "Prey",
   Rigger: "Rigger",
   Vanilla: "Vanilla",
   Other: "Other",
