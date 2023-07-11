@@ -40,10 +40,12 @@ export const {
   toggleExistRelationship,
   setRelationship,
   setOtherRelationship,
+  setDescription,
 } = relationshipSlice.actions;
 
 export const getExistRelationship = (state: RootState) => state.relationship.exist;
-export const getRelationship = (state: RootState) => state.relationship.relationship;
+export const getRelationship = (state: RootState) => state.relationship.value;
 export const getOtherRelationship = (state: RootState) => state.relationship.other;
+export const getDescription = (state: RootState) => state.relationship.desc;
 
 export default relationshipSlice.reducer;

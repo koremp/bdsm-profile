@@ -39,10 +39,12 @@ export const {
   toggleExistRomantic,
   setRomantic,
   setOtherRomantic,
+  setDescription,
 } = romanticSlice.actions;
 
 export const getExistRomantic = (state: RootState) => state.romantic.exist;
-export const getRomantic = (state: RootState) => state.romantic.romantic;
+export const getRomantic = (state: RootState) => state.romantic.value;
 export const getOtherRomantic = (state: RootState) => state.romantic.other;
+export const getDescription = (state: RootState) => state.romantic.desc;
 
 export default romanticSlice.reducer;

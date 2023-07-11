@@ -41,10 +41,13 @@ export const {
   toggleExistGender,
   setGender,
   setOtherGender,
+  setDescription,
 } = genderSlice.actions;
 
 export const getExistGender = (state: RootState) => state.gender.exist;
-export const getGender = (state: RootState) => state.gender.gender;
+export const getGender = (state: RootState) => state.gender.value;
 export const getOtherGender = (state: RootState) => state.gender.other;
+export const getDescription = (state: RootState) => state.gender.desc;
+
 
 export default genderSlice.reducer;

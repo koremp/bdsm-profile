@@ -38,10 +38,12 @@ export const {
   toggleExistSexual,
   setSexual,
   setOtherSexual,
+  setDescription,
 } = sexualSlice.actions;
 
 export const getExistSexual = (state: RootState) => state.sexual.exist;
-export const getSexual = (state: RootState) => state.sexual.sexual;
+export const getSexual = (state: RootState) => state.sexual.value;
 export const getOtherSexual = (state: RootState) => state.sexual.other;
+export const getDescription = (state: RootState) => state.sexual.desc;
 
 export default sexualSlice.reducer;

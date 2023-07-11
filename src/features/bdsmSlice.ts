@@ -52,10 +52,12 @@ export const {
   toggleExistBDSM,
   setBDSMs,
   setOtherBDSMs,
+  setDescription,
 } = bdsmSlice.actions;
 
 export const getExistBDSM = (state: RootState) => state.bdsm.exist;
-export const getBDSMs = (state: RootState) => state.bdsm.bdsm;
+export const getBDSMs = (state: RootState) => state.bdsm.values
 export const getOtherBDSMs = (state: RootState) => state.bdsm.others;
+export const getDescription = (state: RootState) => state.bdsm.desc;
 
 export default bdsmSlice.reducer;
