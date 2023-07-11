@@ -91,11 +91,11 @@ export default function ResultProfilePage() {
                     <Chip label={otherGender} variant='outlined' />
                   )
                 }
+                <Typography>{genderDesc}</Typography>
               </>
             )
           }
         </Box>
-        <Typography>{genderDesc}</Typography>
       </Box>
       <Box>
         <Typography>
@@ -112,11 +112,11 @@ export default function ResultProfilePage() {
                     <Chip label={otherRomantic} variant='outlined' />
                   )
                 }
+                <Typography>{romanticDesc}</Typography>
               </>
             )
           }
         </Box>
-        <Typography>{romanticDesc}</Typography>
       </Box>
       <Box>
         <Typography>
@@ -133,11 +133,11 @@ export default function ResultProfilePage() {
                     <Chip label={otherSexual} variant='outlined' />
                   )
                 }
+                <Typography>{sexualDesc}</Typography>
               </>
             )
           }
         </Box>
-        <Typography>{sexualDesc}</Typography>
       </Box>
       <Box>
         <Typography>
@@ -154,11 +154,11 @@ export default function ResultProfilePage() {
                     <Chip label={otherRelationship} variant='outlined' />
                   )
                 }
+                <Typography>{relationshipDesc}</Typography>
               </>
             )
           }
         </Box>
-        <Typography>{relationshipDesc}</Typography>
       </Box>
       <Box>
         <Typography>
@@ -180,11 +180,11 @@ export default function ResultProfilePage() {
                     ))
                   )
                 }
+                <Typography>{BDSMDesc}</Typography>
               </>
             )
           }
         </Box>
-        <Typography>{BDSMDesc}</Typography>
       </Box>
     </>
   );
