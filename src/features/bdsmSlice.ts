@@ -19,7 +19,7 @@ export const bdsmSlice = createSlice({
       if (!state.exist) {
         state.values = [];
         state.others = [];
-        state.desc = '',
+        state.desc = '';
       }
     },
     setBDSMs: (state, action: PayloadAction<BDSM>) => {
