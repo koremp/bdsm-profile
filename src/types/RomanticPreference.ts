@@ -42,7 +42,7 @@ export const romanticPreferenceArray: readonly Information[] = [
     text: 'Other',
     description: '',
   },
-];
+] as const;
 
 export type RomanticPreference = typeof romanticPreferenceArray[number]['text'];
 

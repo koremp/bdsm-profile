@@ -30,7 +30,7 @@ export const relationshipPreferenceArray: readonly Information[] = [
     text: 'Other',
     description: '',
   },
-];
+] as const;
 
 export type RelationshipPreference = typeof relationshipPreferenceArray[number]['text'];
 

@@ -50,7 +50,7 @@ export const sexualPreferenceArray: readonly Information[] = [
     text: 'Other',
     description: '',
   },
-];
+] as const;
 
 export type SexualPreference = typeof sexualPreferenceArray[number]['text'];
 

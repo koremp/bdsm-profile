@@ -50,7 +50,7 @@ export const monopolyRelationshipArray: readonly Information[] = [
     text: 'Other',
     description: '',
   },
-];
+] as const;
 
 export type MonopolyRelationship = typeof monopolyRelationshipArray[number]['text'];
 

@@ -66,6 +66,10 @@ export const genderArray: readonly Information[] = [
     text: 'Third Gender',
     description: 'Some cultures recognize and embrace the existence of more than two genders, often referred to as third gender identities. These identities can vary across cultures and may have specific local names or terms.',
   },
+  {
+    text: 'Other',
+    description: '',
+  },
 ] as const;
 
 export type Gender = typeof genderArray[number]['text'];
