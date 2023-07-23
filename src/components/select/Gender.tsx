@@ -10,9 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import { Gender } from 'src/types/Gender';
-
-import genderArray from 'src/constants/genderArray';
+import { Gender, genderArray } from 'src/types/Gender';
 
 import {
   toggleExistGender,
@@ -71,12 +69,12 @@ export default function GenderComponent() {
             }}
           >
             {
-              genderArray.map((g) => (
+              genderArray.map(({ text, description }) => (
                 <FormControlLabel
-                  key={g}
-                  value={g}
+                  key={text}
+                  value={text}
                   control={<Radio />}
-                  label={g}
+                  label={text}
                 />
               ))
             }

@@ -10,42 +10,41 @@ import {
   Typography,
 } from '@mui/material';
 
-import { Romantic } from 'src/types/Romantic';
 
 import {
-  getExistRomantic,
-  toggleExistRomantic,
-  getRomantic,
-  setRomantic,
-  getOtherRomantic,
-  setOtherRomantic,
+  getExistRomanticPreference,
+  toggleExistRomanticPreference,
+  getRomanticPreference,
+  setRomanticPreference,
+  getOtherRomanticPreference,
+  setOtherRomanticPreference,
   getDescription,
   setDescription,
-} from 'src/features/romanticSlice';
+} from 'src/features/romanticPreferenceSlice';
 
-import romanticArray from 'src/constants/romanticArray';
+import { RomanticPreference, romanticPreferenceArray } from 'src/types/RomanticPreference';
 
 import Input from '../Input';
 
 export default function RomanticComponent() {
   const dispatch = useDispatch();
 
-  const isExist = useSelector(getExistRomantic);
-  const romantic = useSelector(getRomantic);
-  const otherRomantic = useSelector(getOtherRomantic);
+  const isExist = useSelector(getExistRomanticPreference);
+  const romanticPreference = useSelector(getRomanticPreference);
+  const otherRomanticPreference = useSelector(getOtherRomanticPreference);
   const desc = useSelector(getDescription);
 
-  const handleClickRomantic = () => {
-    dispatch(toggleExistRomantic());
+  const handleClickRomanticPreference = () => {
+    dispatch(toggleExistRomanticPreference());
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setRomantic((e.target as HTMLInputElement).value));
+    dispatch(setRomanticPreference((e.target as HTMLInputElement).value));
   }
 
-  const handleChangeOtherRomantic = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const text = (e.target as HTMLInputElement).value;
-    dispatch(setOtherRomantic(text));
+  const handleChangeOtherRomanticPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const romanticPreference: RomanticPreference = (e.target as HTMLInputElement).value;
+    dispatch(setOtherRomanticPreference(romanticPreference));
   }
 
   return (
@@ -54,17 +53,17 @@ export default function RomanticComponent() {
         control={
           <Checkbox
             checked={isExist}
-            onClick={() => handleClickRomantic()}
+            onClick={() => handleClickRomanticPreference()}
           />
         }
-        label={"Romantic"}
+        label={"Romantic Preference"}
       />
       <>
         {
           isExist && (
             <>
               <RadioGroup
-                value={romantic}
+                value={romanticPreference}
                 onChange={handleChange}
                 sx={{
                   display: 'flex',
@@ -72,21 +71,21 @@ export default function RomanticComponent() {
                 }}
               >
                 {
-                  romanticArray.map((s) => (
+                  romanticPreferenceArray.map(({ text, description }) => (
                     <FormControlLabel
-                      key={s}
-                      value={s}
+                      key={text}
+                      value={text}
                       control={<Radio />}
-                      label={s}
+                      label={text}
                     />
                   ))
                 }
               </RadioGroup>
               {
-                romantic === Romantic.Other && (
+                romanticPreference === RomanticPreference.Other && (
                   <Input
-                    value={otherRomantic}
-                    onChange={handleChangeOtherRomantic}
+                    value={otherRomanticPreference}
+                    onChange={handleChangeOtherRomanticPreference}
                   />
                 )
               }

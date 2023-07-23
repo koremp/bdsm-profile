@@ -23,9 +23,7 @@ import {
   getDescription,
 } from 'src/features/bdsmSlice';
 
-import { BDSM } from 'src/types/BDSM';
-
-import bdsmArray from 'src/constants/bdsmArray';
+import { BDSM, bdsmArray } from 'src/types/BDSM';
 
 import Input from 'src/components/Input';
 
@@ -71,12 +69,12 @@ export default function BDSMComponent() {
               }}
             >
               {
-                bdsmArray.map((g) => (
+                bdsmArray.map(({ text, description }) => (
                   <FormControlLabel
-                    key={g}
-                    value={g}
+                    key={text}
+                    value={text}
                     control={<Checkbox />}
-                    label={g}
+                    label={text}
                   />
                 ))
               }

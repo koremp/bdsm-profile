@@ -12,40 +12,38 @@ import {
 
 import Input from 'src/components/Input';
 
-import { Sexual } from 'src/types/Sexual';
-
 import {
-  getExistSexual,
-  getSexual,
-  toggleExistSexual,
-  setSexual,
-  getOtherSexual,
-  setOtherSexual,
+  getExistSexualPreference,
+  getSexualPreference,
+  toggleExistSexualPreference,
+  setSexualPreference,
+  getOtherSexualPreference,
+  setOtherSexualPreference,
   getDescription,
   setDescription,
-} from 'src/features/sexualSlice';
+} from 'src/features/sexualPreferenceSlice';
 
-import sexualArray from 'src/constants/sexualArray';
+import { SexualPreference, sexualPreferenceArray } from 'src/types/SexualPreference';
 
 export default function SexualComponent() {
   const dispatch = useDispatch();
 
-  const isExist = useSelector(getExistSexual);
-  const sexual = useSelector(getSexual);
-  const otherSexual = useSelector(getOtherSexual);
+  const isExist = useSelector(getExistSexualPreference);
+  const sexualPreference = useSelector(getSexualPreference);
+  const otherSexualPreference = useSelector(getOtherSexualPreference);
   const desc = useSelector(getDescription);
 
-  const handleClickSexual = () => {
-    dispatch(toggleExistSexual());
+  const handleClickSexualPreference = () => {
+    dispatch(toggleExistSexualPreference());
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setSexual((e.target as HTMLInputElement).value));
+    dispatch(setSexualPreference((e.target as HTMLInputElement).value));
   }
 
-  const handleChangeOtherSexual = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const text = (e.target as HTMLInputElement).value;
-    dispatch(setOtherSexual(text));
+  const handleChangeOtherSexualPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const sexualPreference: SexualPreference = (e.target as HTMLInputElement).value;
+    dispatch(setOtherSexualPreference(sexualPreference));
   }
 
   return (
@@ -54,16 +52,16 @@ export default function SexualComponent() {
         control={
           <Checkbox
             checked={isExist}
-            onClick={() => handleClickSexual()}
+            onClick={() => handleClickSexualPreference()}
           />
         }
-        label={"Sexual"}
+        label={"SexualPreference"}
       />
       {
         isExist && (
           <>
             <RadioGroup
-              value={sexual}
+              value={sexualPreference}
               onChange={handleChange}
               sx={{
                 display: 'flex',
@@ -71,21 +69,21 @@ export default function SexualComponent() {
               }}
             >
               {
-                sexualArray.map((s) => (
+                sexualPreferenceArray.map(({ text, description }) => (
                   <FormControlLabel
-                    key={s}
-                    value={s}
+                    key={text}
+                    value={text}
                     control={<Radio />}
-                    label={s}
+                    label={text}
                   />
                 ))
               }
             </RadioGroup>
             {
-              sexual === Sexual.Other && (
+              sexualPreference === SexualPreference.Other && (
                 <Input
-                  value={otherSexual}
-                  onChange={handleChangeOtherSexual}
+                  value={otherSexualPreference}
+                  onChange={handleChangeOtherSexualPreference}
                 />
               )
             }
