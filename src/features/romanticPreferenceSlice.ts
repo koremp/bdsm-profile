@@ -1,21 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './store';
 
-import { Romantic, RomanticProperty } from 'src/types/RomanticPreference';
+import { RomanticPreference, RomanticPrefenceProperty } from 'src/types/RomanticPreference';
 
 // Define the initial state using that type
-const initialState: RomanticProperty = {
+const initialState: RomanticPrefenceProperty = {
   exist: false,
   value: undefined,
   other: '',
   desc: '',
 }
 
-export const romanticSlice = createSlice({
-  name: 'romantic',
+export const romanticPreferenceSlice = createSlice({
+  name: 'romanticPreference',
   initialState,
   reducers: {
-    toggleExistRomantic: state => {
+    toggleExistRomanticPreference: state => {
       state.exist = !state.exist
       if (!state.exist) {
         state.value = undefined;
@@ -23,10 +23,10 @@ export const romanticSlice = createSlice({
         state.desc = '';
       }
     },
-    setRomantic: (state, action: PayloadAction<Romantic>) => {
+    setRomanticPreference: (state, action: PayloadAction<RomanticPreference>) => {
       state.value = action.payload;
     },
-    setOtherRomantic: (state, action: PayloadAction<string>) => {
+    setOtherRomanticPreference: (state, action: PayloadAction<string>) => {
       state.other = action.payload;
     },
     setDescription: (state, action: PayloadAction<string>) => {
@@ -36,15 +36,15 @@ export const romanticSlice = createSlice({
 });
 
 export const {
-  toggleExistRomantic,
-  setRomantic,
-  setOtherRomantic,
+  toggleExistRomanticPreference,
+  setRomanticPreference,
+  setOtherRomanticPreference,
   setDescription,
-} = romanticSlice.actions;
+} = romanticPreferenceSlice.actions;
 
-export const getExistRomantic = (state: RootState) => state.romantic.exist;
-export const getRomantic = (state: RootState) => state.romantic.value;
-export const getOtherRomantic = (state: RootState) => state.romantic.other;
-export const getDescription = (state: RootState) => state.romantic.desc;
+export const getExistRomanticPreference = (state: RootState) => state.romanticPreference.exist;
+export const getRomanticPreference = (state: RootState) => state.romanticPreference.value;
+export const getOtherRomanticPreference = (state: RootState) => state.romanticPreference.other;
+export const getDescription = (state: RootState) => state.romanticPreference.desc;
 
-export default romanticSlice.reducer;
+export default romanticPreferenceSlice.reducer;
