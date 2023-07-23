@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Pride Profile</title>
+        <title>BDSM Profile</title>
         <meta name="description" content="Index Page of Pride Profile" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
