@@ -5,7 +5,7 @@ export const Dirty = {
   BodyFluid: 'Body Fluid',
   Vomit: 'Vomit',
   Golden: 'Golden',
-  Scat: 'Scat',
+  Scatology: 'Scatology',
 };
 
 export type Dirty = typeof Dirty[keyof typeof Dirty];
