@@ -1,15 +1,16 @@
 import { Box, Typography } from '@mui/material';
+import Link from 'next/link';
 
 export default function GuidePage() {
   return (
     <>
       <Typography>BDSM Guide Page</Typography>
       <Box>
-        <Typography>SSC</Typography>
-        <Typography>RACK</Typography>
-        <Typography>PRICK</Typography>
-        <Typography>CNC</Typography>
-        <Typography>CCCC</Typography>
+        <Link href='/guide/cccc'>SSC</Link>
+        <Link href='/guide/rack'>RACK</Link>
+        <Link href='/guide/prick'>PRICK</Link>
+        <Link href='/guide/cnc'>CNC</Link>
+        <Link href='/guide/cccc'>CCCC</Link>
       </Box>
     </>
   );
