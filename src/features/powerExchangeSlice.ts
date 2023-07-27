@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './store';
 
 import { PowerExchange, PowerExchangeProperty } from 'src/types/PowerExchange';
-import { powerExchangeSlice } from './powerExchangeSlice';
 
 const initialState: PowerExchangeProperty = {
   exist: false,
