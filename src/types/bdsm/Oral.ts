@@ -10,3 +10,12 @@ export const Oral = {
 };
 
 export type Oral = typeof Oral[keyof typeof Oral];
+
+export const oralArray: Oral[] = [
+  Oral.Cunnilingus,
+  Oral.DeepThroat,
+  Oral.Swallow,
+  Oral.FaceEjaculation,
+  Oral.FaceSitting,
+  Oral.SixtyNine,
+];

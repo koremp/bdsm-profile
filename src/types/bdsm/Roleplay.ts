@@ -16,3 +16,18 @@ export const Roleplay = {
 };
 
 export type Roleplay = typeof Roleplay[keyof typeof Roleplay];
+
+export const roleplayArray: Roleplay[] = [
+  Roleplay.Cat,
+  Roleplay.Dog,
+  Roleplay.Baby,
+  Roleplay.SituationPlay,
+  Roleplay.AgePlay,
+  Roleplay.AgePlay,
+  Roleplay.Doll,
+  Roleplay.Furniture,
+  Roleplay.HorseRiding,
+  Roleplay.Livestock,
+  Roleplay.Slave,
+  Roleplay.Forced,
+];

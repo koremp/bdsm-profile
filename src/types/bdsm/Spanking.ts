@@ -22,3 +22,24 @@ export const Spanking = {
 };
 
 export type Spanking = typeof Spanking[keyof typeof Spanking];
+
+export const spankingArray: Spanking[] = [
+  Spanking.Hand,
+  Spanking.Belt,
+  Spanking.Kane,
+  Spanking.Paddle,
+  Spanking.CropWhip,
+  Spanking.Whip,
+  Spanking.Palm,
+  Spanking.Arm,
+  Spanking.Cheek,
+  Spanking.Chest,
+  Spanking.Back,
+  Spanking.Sole,
+  Spanking.Calf,
+  Spanking.Hip,
+  Spanking.FrontThigh,
+  Spanking.BackThigh,
+  Spanking.Genitals,
+  Spanking.Anal,
+];

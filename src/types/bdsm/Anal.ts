@@ -17,3 +17,19 @@ export const Anal = {
 };
 
 export type Anal = typeof Anal[keyof typeof Anal];
+
+export const analArray: Anal[] = [
+  Anal.Observe,
+  Anal.Touch,
+  Anal.Analingus,
+  Anal.Fingering,
+  Anal.Vibrator,
+  Anal.Analplug,
+  Anal.Tail,
+  Anal.Beads,
+  Anal.Hook,
+  Anal.Dildo,
+  Anal.Enema,
+  Anal.Extend,
+  Anal.Sex,
+];

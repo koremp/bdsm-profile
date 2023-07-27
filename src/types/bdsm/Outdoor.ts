@@ -7,3 +7,9 @@ export const Outdoor = {
 };
 
 export type Outdoor = typeof Outdoor[keyof typeof Outdoor];
+
+export const outdoorArray: Outdoor[] = [
+  Outdoor.Exhibition,
+  Outdoor.Play,
+  Outdoor.Sex,
+];

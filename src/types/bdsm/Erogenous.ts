@@ -13,8 +13,25 @@ export const Erogenous = {
   Thigh: 'Thigh',
   Calf: 'Calf',
   Foot: 'Foot',
-  SexualOrgan: 'Sexual Organ',
+  Genitals: 'Genitals',
   Anal: 'Anal',
 };
 
 export type Erogenous = typeof Erogenous[keyof typeof Erogenous];
+
+export const erogenousArray: Erogenous[] = [
+  Erogenous.Lip,
+  Erogenous.Tongue,
+  Erogenous.Ear,
+  Erogenous.Neck,
+  Erogenous.Armpit,
+  Erogenous.Chest,
+  Erogenous.Hand,
+  Erogenous.Wrist,
+  Erogenous.Hip,
+  Erogenous.Thigh,
+  Erogenous.Calf,
+  Erogenous.Foot,
+  Erogenous.Genitals,
+  Erogenous.Anal,
+];

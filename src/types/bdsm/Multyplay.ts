@@ -10,3 +10,12 @@ export const Multiplay = {
 };
 
 export type Multiplay = typeof Multiplay[keyof typeof Multiplay];
+
+export const multiplayArray: Multiplay[] = [
+  Multiplay.Watch,
+  Multiplay.Threesome,
+  Multiplay.SimultaneousPenetration,
+  Multiplay.Groupsex,
+  Multiplay.Promiscuity,
+  Multiplay.Gangbang,
+];

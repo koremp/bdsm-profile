@@ -16,3 +16,18 @@ export const Physical = {
 };
 
 export type Physical = typeof Physical[keyof typeof Physical];
+
+export const physicalArray: Physical[] = [
+  Physical.PullHair,
+  Physical.Press,
+  Physical.Claw,
+  Physical.Bite,
+  Physical.BreathControl,
+  Physical.OrgasmControl,
+  Physical.MultiOrgasm,
+  Physical.BallBusting,
+  Physical.Needle,
+  Physical.Blood,
+  Physical.Torture,
+  Physical.Lynch,
+];

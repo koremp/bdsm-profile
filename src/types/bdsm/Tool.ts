@@ -16,3 +16,18 @@ export const Tool = {
 };
 
 export type Tool = typeof Tool[keyof typeof Tool];
+
+export const toolArray: Tool[] = [
+  Tool.Eyepatch,
+  Tool.Gag,
+  Tool.NippleClamp,
+  Tool.Mask,
+  Tool.ChastityBelt,
+  Tool.NoseHook,
+  Tool.Fairy,
+  Tool.EggVibrator,
+  Tool.ClitInhaler,
+  Tool.ArtificialVagina,
+  Tool.Dildo,
+  Tool.StrapOnDildo,
+];

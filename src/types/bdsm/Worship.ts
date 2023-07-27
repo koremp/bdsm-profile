@@ -5,8 +5,17 @@ export const Worship = {
   Foot: 'Foot',
   Shoe: 'Shoe',
   Chest: 'Chest',
-  SexualOrgan: 'Sexual Organ',
-  Organ: 'Organ',
+  Genitals: 'Genitals',
+  Anal: 'Anal',
 };
 
 export type Worship = typeof Worship[keyof typeof Worship];
+
+export const worshipArray: Worship[] = [
+  Worship.Hand,
+  Worship.Foot,
+  Worship.Shoe,
+  Worship.Chest,
+  Worship.Genitals,
+  Worship.Anal,
+];

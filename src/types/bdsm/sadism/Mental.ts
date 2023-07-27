@@ -22,3 +22,24 @@ export const Mental = {
 };
 
 export type Mental = typeof Mental[keyof typeof Mental];
+
+export const mentalArray: Mental[] = [
+  Mental.Grooming,
+  Mental.Begging,
+  Mental.Resist,
+  Mental.DirtyTalk,
+  Mental.PhysicalCheckup,
+  Mental.Scribble,
+  Mental.Shame,
+  Mental.Neglect,
+  Mental.Mission,
+  Mental.EverydayManagement,
+  Mental.Discipline,
+  Mental.Management,
+  Mental.AnimalTraining,
+  Mental.SlaveTraining,
+  Mental.Kidnap,
+  Mental.Confine,
+  Mental.PublicDiscipline,
+  Mental.HouseSlave,
+];

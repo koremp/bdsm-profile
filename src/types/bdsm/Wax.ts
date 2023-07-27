@@ -15,3 +15,17 @@ export const Wax = {
 };
 
 export type Wax = typeof Wax[keyof typeof Wax];
+
+export const waxArray: Wax[] = [
+  Wax.Hand,
+  Wax.Arm,
+  Wax.Shoulder,
+  Wax.Chest,
+  Wax.Back,
+  Wax.Foot,
+  Wax.Calf,
+  Wax.FrontThigh,
+  Wax.BackThigh,
+  Wax.Genitals,
+  Wax.Anal,
+];

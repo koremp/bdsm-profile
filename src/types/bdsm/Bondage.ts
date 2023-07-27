@@ -15,3 +15,17 @@ export const Bondage = {
 };
 
 export type Bondage = typeof Bondage[keyof typeof Bondage];
+
+export const bondageArray: Bondage[] = [
+  Bondage.Necktie,
+  Bondage.Belt,
+  Bondage.Harness,
+  Bondage.Leader,
+  Bondage.BondageTape,
+  Bondage.Cuff,
+  Bondage.SpreaderBar,
+  Bondage.Straitjacket,
+  Bondage.Rope,
+  Bondage.Hanging,
+  Bondage.Water,
+];

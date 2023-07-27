@@ -10,3 +10,12 @@ export const Soft = {
 };
 
 export type Soft = typeof Soft[keyof typeof Soft];
+
+export const softArray: Soft[] = [
+  Soft.Honorific,
+  Soft.Tickle,
+  Soft.Hug,
+  Soft.Stroke,
+  Soft.Kiss,
+  Soft.DeepKiss,
+];

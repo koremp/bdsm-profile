@@ -10,3 +10,12 @@ export const SexualPosition = {
 };
 
 export type SexualPosition = typeof SexualPosition[keyof typeof SexualPosition];
+
+export const sexualPositionArray: SexualPosition[] = [
+  SexualPosition.Missionary,
+  SexualPosition.Doggy,
+  SexualPosition.Lateral,
+  SexualPosition.Riding,
+  SexualPosition.Sitting,
+  SexualPosition.Standing,
+];

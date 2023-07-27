@@ -10,3 +10,12 @@ export const NonPenetration = {
 };
 
 export type NonPenetration = typeof NonPenetration[keyof typeof NonPenetration];
+
+export const nonPenetrationArray: NonPenetration[] = [
+  NonPenetration.Masturbation,
+  NonPenetration.Footjob,
+  NonPenetration.Handjob,
+  NonPenetration.Fingering,
+  NonPenetration.MammaryIntercourse,
+  NonPenetration.Humping,
+];
