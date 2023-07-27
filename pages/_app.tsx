@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Container maxWidth="xs" sx={{
           backgroundColor: "#eeeeee",
-          height: "100vh",
+          minHeight: "100vh",
         }}>
           <Component {...pageProps} />
         </Container>
