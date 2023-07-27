@@ -1,9 +1,12 @@
 import {
+  Box,
   Checkbox,
   FormControl,
   FormControlLabel,
   Typography
 } from '@mui/material';
+
+import Link from 'next/link';
 
 import { analArray } from 'src/types/bdsm/Anal';
 import { bondageArray } from 'src/types/bdsm/Bondage';
@@ -26,7 +29,7 @@ import { softArray } from 'src/types/bdsm/sadism/Soft';
 
 export default function bdsmChecklist() {
   return (
-    <>
+    <Box>
       <Typography>BDSM Checklist</Typography>
       <FormControl>
         <Typography>Erogenous</Typography>
@@ -172,6 +175,10 @@ export default function bdsmChecklist() {
           ))
         }
       </FormControl>
-    </>
+      <Box>
+        <Link href='/profile/select'>Back</Link>
+        <Link href='/profile/result'>Result</Link>
+      </Box>
+    </Box>
   );
 };
