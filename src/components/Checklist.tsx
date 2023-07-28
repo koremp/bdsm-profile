@@ -30,6 +30,7 @@ export default function Checklist({
       <RadioGroup
         row
         aria-labelledby={label + '-me-group'}
+        value={me}
         onChange={(event, value) => handleChange({ isMe: true, value: parseInt(value) })}
       >
         {
@@ -37,12 +38,13 @@ export default function Checklist({
             <FormControlLabel value={n} control={<Radio />} label={n} />
           ))
         }
+        <Button onClick={() => handleChange({ isMe: true, value: 0 })}>Remove</Button>
       </RadioGroup>
-      <Button onClick={() => handleChange({ isMe: true, value: 0 })}>Remove</Button>
       <FormLabel>{label} - You</FormLabel>
       <RadioGroup
         row
         aria-labelledby={label + '-you-group'}
+        value={you}
         onChange={(event, value) => handleChange({ isMe: false, value: parseInt(value) })}
       >
         {
@@ -50,8 +52,8 @@ export default function Checklist({
             <FormControlLabel value={n} control={<Radio />} label={n} />
           ))
         }
+        <Button onClick={() => handleChange({ isMe: false, value: 0 })}>Remove</Button>
       </RadioGroup >
-      <Button onClick={() => handleChange({ isMe: false, value: 0 })}>Remove</Button>
     </FormControl >
   );
 };
