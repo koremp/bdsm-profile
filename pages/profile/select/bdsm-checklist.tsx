@@ -1,6 +1,5 @@
 import {
   Box,
-  FormControl,
   FormLabel,
   Typography,
 } from '@mui/material';
@@ -166,406 +165,370 @@ export default function bdsmChecklist() {
   return (
     <Box>
       <Typography>BDSM Checklist</Typography>
-      <FormControl>
-        <FormLabel>Erogenous</FormLabel>
-        {
-          erogenousArray.map((item, index) => {
-            const type = item as Erogenous;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={erogenous[index].me}
-                  you={erogenous[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeErogenous(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Worship</Typography>
-        {
-          worshipArray.map((item, index) => {
-            const type = item as Worship;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={worship[index].me}
-                  you={worship[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeWorship(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Soft</Typography>
-        {
-          softArray.map((item, index) => {
-            const type = item as Soft;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={soft[index].me}
-                  you={soft[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeSoft(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Mental</Typography>
-        {
-          mentalArray.map((item, index) => {
-            const type = item as Mental;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={mental[index].me}
-                  you={mental[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeMental(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Physical</Typography>
-        {
-          physicalArray.map((item, index) => {
-            const type = item as Physical;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={physical[index].me}
-                  you={physical[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangePhysical(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Dirty Play</Typography>
-        {
-          dirtyArray.map((item, index) => {
-            const type = item as Dirty;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={dirty[index].me}
-                  you={dirty[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeDirty(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Tool</Typography>
-        {
-          toolArray.map((item, index) => {
-            const type = item as Tool;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={tool[index].me}
-                  you={tool[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeTool(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Bondage</Typography>
-        {
-          bondageArray.map((item, index) => {
-            const type = item as Bondage;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={bondage[index].me}
-                  you={bondage[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeBondage(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Wax Play</Typography>
-        {
-          waxArray.map((item, index) => {
-            const type = item as Wax;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={wax[index].me}
-                  you={wax[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeWax(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Spanking</Typography>
-        {
-          spankingArray.map((item, index) => {
-            const type = item as Spanking;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={spanking[index].me}
-                  you={spanking[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeSpanking(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Roleplay</Typography>
-        {
-          roleplayArray.map((item, index) => {
-            const type = item as Roleplay;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={roleplay[index].me}
-                  you={roleplay[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeRoleplay(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Flim</Typography>
-        {
-          filmArray.map((item, index) => {
-            const type = item as Film;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={film[index].me}
-                  you={film[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeFilm(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Outdoor</Typography>
-        {
-          outdoorArray.map((item, index) => {
-            const type = item as Outdoor;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={outdoor[index].me}
-                  you={outdoor[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeOutdoor(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Multiplay</Typography>
-        {
-          multiplayArray.map((item, index) => {
-            const type = item as Multiplay;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={multiplay[index].me}
-                  you={multiplay[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeMultiplay(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Non Penetration Sexual Behavior</Typography>
-        {
-          nonPenetrationArray.map((item, index) => {
-            const type = item as NonPenetration;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={nonPenentration[index].me}
-                  you={nonPenentration[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeNonPenetration(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Sexual Position</Typography>
-        {
-          sexualPositionArray.map((item, index) => {
-            const type = item as SexualPosition;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={sexualPosition[index].me}
-                  you={sexualPosition[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeSexualPosition(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Oral</Typography>
-        {
-          oralArray.map((item, index) => {
-            const type = item as Oral;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={oral[index].me}
-                  you={oral[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeOral(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
-      <FormControl>
-        <Typography>Anal</Typography>
-        {
-          analArray.map((item, index) => {
-            const type = item as Anal;
-            return (
-              <>
-                <Typography>{item}</Typography>
-                <Checklist
-                  label={item}
-                  me={anal[index].me}
-                  you={anal[index].you}
-                  handleChange={
-                    ({ isMe, value }) =>
-                      handleChangeAnal(type, isMe, value)
-                  }
-                />
-              </>
-            );
-          })
-        }
-      </FormControl>
+      <FormLabel>Erogenous</FormLabel>
+      {
+        erogenousArray.map((item, index) => {
+          const type = item as Erogenous;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={erogenous[index].me}
+                you={erogenous[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeErogenous(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Worship</Typography>
+      {
+        worshipArray.map((item, index) => {
+          const type = item as Worship;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={worship[index].me}
+                you={worship[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeWorship(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Soft</Typography>
+      {
+        softArray.map((item, index) => {
+          const type = item as Soft;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={soft[index].me}
+                you={soft[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeSoft(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Mental</Typography>
+      {
+        mentalArray.map((item, index) => {
+          const type = item as Mental;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={mental[index].me}
+                you={mental[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeMental(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Physical</Typography>
+      {
+        physicalArray.map((item, index) => {
+          const type = item as Physical;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={physical[index].me}
+                you={physical[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangePhysical(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Dirty Play</Typography>
+      {
+        dirtyArray.map((item, index) => {
+          const type = item as Dirty;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={dirty[index].me}
+                you={dirty[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeDirty(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Tool</Typography>
+      {
+        toolArray.map((item, index) => {
+          const type = item as Tool;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={tool[index].me}
+                you={tool[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeTool(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Bondage</Typography>
+      {
+        bondageArray.map((item, index) => {
+          const type = item as Bondage;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={bondage[index].me}
+                you={bondage[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeBondage(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Wax Play</Typography>
+      {
+        waxArray.map((item, index) => {
+          const type = item as Wax;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={wax[index].me}
+                you={wax[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeWax(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Spanking</Typography>
+      {
+        spankingArray.map((item, index) => {
+          const type = item as Spanking;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={spanking[index].me}
+                you={spanking[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeSpanking(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Roleplay</Typography>
+      {
+        roleplayArray.map((item, index) => {
+          const type = item as Roleplay;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={roleplay[index].me}
+                you={roleplay[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeRoleplay(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Flim</Typography>
+      {
+        filmArray.map((item, index) => {
+          const type = item as Film;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={film[index].me}
+                you={film[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeFilm(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Outdoor</Typography>
+      {
+        outdoorArray.map((item, index) => {
+          const type = item as Outdoor;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={outdoor[index].me}
+                you={outdoor[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeOutdoor(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Multiplay</Typography>
+      {
+        multiplayArray.map((item, index) => {
+          const type = item as Multiplay;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={multiplay[index].me}
+                you={multiplay[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeMultiplay(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Non Penetration Sexual Behavior</Typography>
+      {
+        nonPenetrationArray.map((item, index) => {
+          const type = item as NonPenetration;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={nonPenentration[index].me}
+                you={nonPenentration[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeNonPenetration(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Sexual Position</Typography>
+      {
+        sexualPositionArray.map((item, index) => {
+          const type = item as SexualPosition;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={sexualPosition[index].me}
+                you={sexualPosition[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeSexualPosition(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Oral</Typography>
+      {
+        oralArray.map((item, index) => {
+          const type = item as Oral;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={oral[index].me}
+                you={oral[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeOral(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
+      <Typography>Anal</Typography>
+      {
+        analArray.map((item, index) => {
+          const type = item as Anal;
+          return (
+            <>
+              <Typography>{item}</Typography>
+              <Checklist
+                label={item}
+                me={anal[index].me}
+                you={anal[index].you}
+                handleChange={
+                  ({ isMe, value }) =>
+                    handleChangeAnal(type, isMe, value)
+                }
+              />
+            </>
+          );
+        })
+      }
       <Box>
         <Link href='/profile/select'>Back</Link>
         <Link href='/profile/result'>Result</Link>
       </Box>
-    </Box>
+    </Box >
   );
 };
