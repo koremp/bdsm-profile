@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import bdsmReducer from './bdsmSlice';
+import bdsmChecklistReducer from './bdsmChecklistSlice';
 import genderReducer from './genderSlice';
 import monopolyRelationshipReducer from './monopolyRelationshipSlice';
 import powerExchangeReducer from './powerExchangeSlice';
@@ -11,6 +12,7 @@ import sexualPreferenceReducer from './sexualPreferenceSlice';
 const store = configureStore({
   reducer: {
     bdsm: bdsmReducer,
+    bdsmChecklist: bdsmChecklistReducer,
     gender: genderReducer,
     monopolyRelationship: monopolyRelationshipReducer,
     powerExchange: powerExchangeReducer,
