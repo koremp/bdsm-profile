@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Button,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -22,7 +23,9 @@ export default function Checklist({
   handleChange,
 }: ChecklistProps) {
   return (
-    <FormControl>
+    <FormControl sx={{
+      p: 2
+    }}>
       <FormLabel>{label} - Me</FormLabel>
       <RadioGroup
         row
@@ -35,6 +38,7 @@ export default function Checklist({
           ))
         }
       </RadioGroup>
+      <Button onClick={() => handleChange({ isMe: true, value: 0 })}>Remove</Button>
       <FormLabel>{label} - You</FormLabel>
       <RadioGroup
         row
@@ -47,6 +51,7 @@ export default function Checklist({
           ))
         }
       </RadioGroup >
+      <Button onClick={() => handleChange({ isMe: false, value: 0 })}>Remove</Button>
     </FormControl >
   );
 };
