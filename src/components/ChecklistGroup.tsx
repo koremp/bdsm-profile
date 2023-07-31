@@ -1,20 +1,22 @@
 import { Box, Typography } from '@mui/material';
 import Checklist from './Checklist';
 import { ChecklistValue } from 'src/features/bdsmChecklistSlice';
+import { BDSMType } from 'src/types/bdsm/BDSMChecklist';
 
-export interface ChecklistGroupProps<T> {
+export interface ChecklistGroupProps {
   groupName: string
-  typeArray: T[],
+  typeArray: string[],
   checklistArray: ChecklistValue[]
-  handleChange: ({ isMe, value }: { isMe: boolean, value: number }) => void
+  handleChange: ({ isMe, value, type }: { isMe: boolean, value: number, type: BDSMType }) => void
 };
 
-export default function ChecklistGroup<T>({
+export default function ChecklistGroup({
   groupName,
   typeArray,
   checklistArray,
   handleChange,
-}: ChecklistGroupProps<T>) {
+}: ChecklistGroupProps) {
+
   return (
     <Box sx={{
       p: 2,
@@ -28,7 +30,7 @@ export default function ChecklistGroup<T>({
       }}>
         {
           typeArray.map((item, index) => {
-            const type = item as T;
+            const type = item;
             return (
               <Box>
                 <Typography>{item}</Typography>
