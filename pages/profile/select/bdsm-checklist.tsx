@@ -80,13 +80,14 @@ export default function bdsmChecklist() {
   return (
     <Box>
       <Typography>BDSM Checklist</Typography>
-      <ChecklistGroup<Erogenous>
+      <ChecklistGroup
         groupName='Erogenous'
         typeArray={erogenousArray}
         checklistArray={erogenous}
         handleChange={
-          ({ isMe: boolean, value: number }) =>
-            handleChangeChecklist({ isMe, value, checklist: BDSMChecklist.Erogenous, type: Erogenous })
+          ({ isMe, value, type }: { isMe: boolean, value: number, type: BDSMType }) =>
+            // todo: fix this
+            handleChangeChecklist({ isMe, value, checklist: BDSMChecklist.Erogenous, type })
         }
       />
       <Box>
