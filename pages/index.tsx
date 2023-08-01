@@ -1,11 +1,10 @@
-import {
-  ButtonGroup,
-} from '@mui/material'
-
 import Head from 'next/head'
+
+import { ButtonGroup } from '@mui/material'
 
 import LinkButton from 'src/components/LinkButton'
 import Page from 'src/components/Page'
+import { deepPurple } from '@mui/material/colors'
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
         titleText='BDSM Profile'
       >
         {/* todo: add signin button */}
-        <ButtonGroup fullWidth orientation='vertical' >
+        <ButtonGroup sx={{ backgroundColor: `${deepPurple[100]}` }} fullWidth orientation='vertical'>
           <LinkButton href='/profile/select' name='Select Profile' />
           <LinkButton href='/guide' name='Guide' />
         </ButtonGroup>
