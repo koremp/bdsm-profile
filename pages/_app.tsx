@@ -16,13 +16,17 @@ import 'styles/global.css';
 
 import store from 'src/features/store';
 
+import { deepPurple } from '@mui/material/colors';
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SessionContextProvider supabaseClient={supabase}>
       <Provider store={store}>
         <Container maxWidth="xs" sx={{
-          backgroundColor: "#eeeeee",
+          display: 'flex',
+          flexDirection: 'column',
           minHeight: "100vh",
+          backgroundColor: `${deepPurple[50]}`,
         }}>
           <Component {...pageProps} />
         </Container>
