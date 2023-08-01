@@ -1,14 +1,17 @@
 import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
+import Bottom from 'src/components/Bottom';
 
 export default function AgeSelectProfilePage() {
   return (
     <>
       <Typography>Age</Typography>
-      <Box>
-        <Link href='/profile/select'>Back</Link>
-        <Link href='/profile/select/gender'>Gender</Link>
-      </Box>
+      {/* todo: make age component */}
+      <Bottom
+        backHref='/profile/select'
+        backName='Back'
+        nextHref='/profile/select/gender'
+        nextName='Gender'
+      />
     </>
   );
 };

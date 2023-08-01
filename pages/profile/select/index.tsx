@@ -1,60 +1,45 @@
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
+import { ButtonGroup, Typography } from '@mui/material';
+import { deepPurple } from '@mui/material/colors';
+
+import LinkButton, { LinkButtonProps } from 'src/components/LinkButton';
+
 
 export default function IndexSelectProfilePage() {
+  const links: LinkButtonProps[] = [
+    { href: '/profile/select/age', name: 'Age' },
+    { href: '/profile/select/gender', name: 'Gender' },
+    { href: '/profile/select/romanticPreference', name: 'Romantic Preference' },
+    { href: '/profile/select/sexualPreference', name: 'Sexual Preference' },
+    { href: '/profile/select/monopolyRelationship', name: 'Monopoly Relationship' },
+    { href: '/profile/select/bdsm', name: 'BDSM' },
+    { href: '/profile/select/powerExchange', name: 'Power Exchange' },
+    { href: '/profile/select/bdsm-checklist', name: 'BDSM Checklist' },
+  ];
+
   return (
     <>
       <Typography variant='h3'>Select Profile</Typography>
-      <Box
+      <ButtonGroup
+        fullWidth
+        orientation='vertical'
+        aria-label='profile select button group'
         sx={{
-          display: 'flex',
-          flexDirection: 'column'
+          backgroundColor: `${deepPurple[100]}`
         }}
       >
-        <Link
-          href='/profile/select/age'
-        >
-          Age
-        </Link>
-        <Link
-          href='/profile/select/gender'
-        >
-          Gender
-        </Link>
-        <Link href='/profile/select/romanticPreference'>
-          Romantic Preference
-        </Link>
-        <Link
-          href='/profile/select/sexualPreference'
-        >
-          Sexual Preference
-        </Link>
-        <Link
-          href='/profile/select/monopolyRelationship'
-        >
-          Monopoly Relationship
-        </Link>
-        <Link
-          href='/profile/select/relationshipPreference'
-        >
-          Relationship Preference
-        </Link>
-        <Link
-          href='/profile/select/bdsm'
-        >
-          BDSM
-        </Link>
-        <Link
-          href='/profile/select/powerExchange'
-        >
-          Power Exchange
-        </Link>
-        <Link
-          href='/profile/result'
-        >
-          Result
-        </Link>
-      </Box>
+        {links.map(({ href, name }) => (
+          <LinkButton href={href} name={name} />
+        ))}
+      </ButtonGroup>
+      <ButtonGroup
+        fullWidth
+        sx={{
+          mt: 'auto',
+          backgroundColor: `${deepPurple[100]}`
+        }}
+      >
+        <LinkButton href='/' name='back' />
+      </ButtonGroup>
     </>
   );
 };

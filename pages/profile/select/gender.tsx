@@ -1,15 +1,16 @@
-import { Box } from '@mui/material';
-import Link from 'next/link';
 import GenderComponent from 'src/components/select/Gender';
+import Bottom from 'src/components/Bottom';
 
 export default function GenderSelectProfilePage() {
   return (
     <>
       <GenderComponent />
-      <Box>
-        <Link href='/profile/select'>Back</Link>
-        <Link href='/profile/select/romanticPreference'>Romantic Preference</Link>
-      </Box>
+      <Bottom
+        backHref='/profile/select'
+        backName='Back'
+        nextHref='/profile/select/romantic-preference'
+        nextName='Romantic Preference'
+      />
     </>
   );
 };

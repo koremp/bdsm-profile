@@ -1,16 +1,16 @@
-import { Box } from '@mui/material';
-import Link from 'next/link';
 import BDSMComponent from 'src/components/select/BDSM';
+import Bottom from 'src/components/Bottom';
 
 export default function BDSMSelectProfilePage() {
   return (
     <>
       <BDSMComponent />
-      <Box>
-        <Link href='/profile/select'>Back</Link>
-        <Link href='/profile/select/powerExchange'>Power Exchange</Link>
-      </Box>
+      <Bottom
+        backHref='/profile/select'
+        backName='Back'
+        nextHref='/profile/select/power-exchange'
+        nextName='Power Exchange'
+      />
     </>
-
   );
 };

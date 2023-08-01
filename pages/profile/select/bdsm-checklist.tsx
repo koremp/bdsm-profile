@@ -50,6 +50,7 @@ import {
 
 import ChecklistGroup from 'src/components/ChecklistGroup';
 import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
+import Bottom from 'src/components/Bottom';
 
 export default function bdsmChecklist() {
   const dispatch = useDispatch();
@@ -90,10 +91,12 @@ export default function bdsmChecklist() {
             handleChangeChecklist({ isMe, value, checklist: BDSMChecklist.Erogenous, type })
         }
       />
-      <Box>
-        <Link href='/profile/select'>Back</Link>
-        <Link href='/profile/result'>Result</Link>
-      </Box>
-    </Box >
+      <Bottom
+        backHref='/profile/select'
+        backName='Back'
+        nextHref='/profile/result'
+        nextName='Result'
+      />
+    </Box>
   );
 };
