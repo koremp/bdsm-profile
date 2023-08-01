@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import Page from 'src/components/Page';
 
 import {
   Box,
@@ -100,9 +101,7 @@ export default function ResultProfilePage() {
   const powerExchangeDesc = useSelector(getPowerExchange);
 
   return (
-    <>
-      <Typography>Profile Result Page</Typography>
-      {/* todo: add age */}
+    <Page titleText='Selected BDSM Profile Result Page'>
       <Box>
         <Typography>
           Gender
@@ -255,6 +254,6 @@ export default function ResultProfilePage() {
           }
         </Box>
       </Box>
-    </>
+    </Page>
   );
 };
