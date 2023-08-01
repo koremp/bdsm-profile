@@ -9,7 +9,12 @@ export default function GuidePage() {
     <Page
       titleText='BDSM Guide Page'
     >
-      <ButtonGroup fullWidth orientation='vertical' sx={{ backgroundColor: `${deepPurple[100]}` }} >
+      <ButtonGroup
+        fullWidth
+        orientation='vertical'
+        sx={{ backgroundColor: `${deepPurple[100]}` }}
+        aria-label='bdsm guide page link button group'
+      >
         <LinkButton href='/guide/ssc' name='SSC' />
         <LinkButton href='/guide/rack' name='RACK' />
         <LinkButton href='/guide/prick' name='PRICK' />
