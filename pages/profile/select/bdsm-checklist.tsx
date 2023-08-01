@@ -51,6 +51,7 @@ import {
 import ChecklistGroup from 'src/components/ChecklistGroup';
 import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
 import Bottom from 'src/components/Bottom';
+import Page from 'src/components/Page';
 
 export default function bdsmChecklist() {
   const dispatch = useDispatch();
@@ -79,8 +80,15 @@ export default function bdsmChecklist() {
   };
 
   return (
-    <Box>
-      <Typography>BDSM Checklist</Typography>
+    <Page
+      titleText='Profile Select - BDSM Checklist'
+      bottom={{
+        backHref: '/profile/select',
+        backName: 'Back',
+        nextHref: '/profile/result',
+        nextName: 'Result',
+      }}
+    >
       <ChecklistGroup
         groupName='Erogenous'
         typeArray={erogenousArray}
@@ -91,12 +99,6 @@ export default function bdsmChecklist() {
             handleChangeChecklist({ isMe, value, checklist: BDSMChecklist.Erogenous, type })
         }
       />
-      <Bottom
-        backHref='/profile/select'
-        backName='Back'
-        nextHref='/profile/result'
-        nextName='Result'
-      />
-    </Box>
+    </Page>
   );
 };

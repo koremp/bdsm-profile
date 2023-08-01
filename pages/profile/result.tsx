@@ -102,6 +102,7 @@ export default function ResultProfilePage() {
   return (
     <>
       <Typography>Profile Result Page</Typography>
+      {/* todo: add age */}
       <Box>
         <Typography>
           Gender

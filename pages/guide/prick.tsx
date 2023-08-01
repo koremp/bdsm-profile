@@ -1,13 +1,15 @@
-import { Typography, Box } from '@mui/material';
-import Link from 'next/link';
+import Page from 'src/components/Page';
 
 export default function PRICKGuidePage() {
   return (
-    <>
-      <Typography>PRICK</Typography>
-      <Box>
-        <Link href='/guide'>Back</Link>
-      </Box>
-    </>
+    <Page
+      titleText='PRICK'
+      bottom={{
+        backHref: '/guide',
+        backName: 'Back',
+        nextHref: '/guide/cnc',
+        nextName: 'CNC',
+      }}
+    />
   );
-};
+};;

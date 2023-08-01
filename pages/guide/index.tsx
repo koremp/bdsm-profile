@@ -1,17 +1,20 @@
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
+import { ButtonGroup } from '@mui/material';
+
+import LinkButton from 'src/components/LinkButton';
+import Page from 'src/components/Page';
 
 export default function GuidePage() {
   return (
-    <>
-      <Typography>BDSM Guide Page</Typography>
-      <Box>
-        <Link href='/guide/cccc'>SSC</Link>
-        <Link href='/guide/rack'>RACK</Link>
-        <Link href='/guide/prick'>PRICK</Link>
-        <Link href='/guide/cnc'>CNC</Link>
-        <Link href='/guide/cccc'>CCCC</Link>
-      </Box>
-    </>
+    <Page
+      titleText='BDSM Guide Page'
+    >
+      <ButtonGroup fullWidth orientation='vertical'>
+        <LinkButton href='/guide/ssc' name='SSC' />
+        <LinkButton href='/guide/rack' name='RACK' />
+        <LinkButton href='/guide/prick' name='PRICK' />
+        <LinkButton href='/guide/cnc' name='CNC' />
+        <LinkButton href='/guide/cccc' name='CCCC' />
+      </ButtonGroup>
+    </Page>
   );
 };

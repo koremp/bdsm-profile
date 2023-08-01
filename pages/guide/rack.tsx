@@ -1,13 +1,15 @@
-import { Typography, Box } from '@mui/material';
-import Link from 'next/link';
+import Page from 'src/components/Page';
 
 export default function RACKGuidePage() {
   return (
-    <>
-      <Typography>RACK</Typography>
-      <Box>
-        <Link href='/guide'>Back</Link>
-      </Box>
-    </>
+    <Page
+      titleText='RACK'
+      bottom={{
+        backHref: '/guide',
+        backName: 'Back',
+        nextHref: '/guide/prick',
+        nextName: 'PRICK',
+      }}
+    />
   );
-};
+};;

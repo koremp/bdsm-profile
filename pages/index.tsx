@@ -1,11 +1,11 @@
 import {
-  Box,
-  Typography,
+  ButtonGroup,
 } from '@mui/material'
 
 import Head from 'next/head'
 
-import Bottom from 'src/components/Bottom'
+import LinkButton from 'src/components/LinkButton'
+import Page from 'src/components/Page'
 
 export default function Home() {
   return (
@@ -15,18 +15,15 @@ export default function Home() {
         <meta name="description" content="Index Page of BDSM Profile" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <>
-        <Typography variant='h3'>BDSM Profile</Typography>
-        <Typography>
-          Sign In, Sign Out
-        </Typography>
-        <Bottom
-          backHref='/profile/select'
-          backName='Profile Select'
-          nextHref='/guide'
-          nextName='Guide'
-        />
-      </>
+      <Page
+        titleText='BDSM Profile'
+      >
+        {/* todo: add signin button */}
+        <ButtonGroup fullWidth orientation='vertical' >
+          <LinkButton href='/profile/select' name='Select Profile' />
+          <LinkButton href='/guide' name='Guide' />
+        </ButtonGroup>
+      </Page>
     </>
   )
 }

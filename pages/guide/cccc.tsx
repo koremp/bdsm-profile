@@ -1,13 +1,14 @@
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
+import { ButtonGroup } from '@mui/material';
+
+import Page from 'src/components/Page';
+import LinkButton from 'src/components/LinkButton';
 
 export default function CCCCGuidePage() {
   return (
-    <>
-      <Typography>CCCC</Typography>
-      <Box>
-        <Link href='/guide'>Back</Link>
-      </Box>
-    </>
+    <Page titleText='CCCC'>
+      <ButtonGroup sx={{ mt: 'auto' }} >
+        <LinkButton href='/guide' name='Back' />
+      </ButtonGroup>
+    </Page>
   );
 };

@@ -1,13 +1,15 @@
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
+import Page from 'src/components/Page';
 
 export default function CNCGuidePage() {
   return (
-    <>
-      <Typography>CNC</Typography>
-      <Box>
-        <Link href='/guide'>Back</Link>
-      </Box>
-    </>
+    <Page
+      titleText='CNC'
+      bottom={{
+        backHref: '/guide',
+        backName: 'Back',
+        nextHref: '/guide/cccc',
+        nextName: 'CCCC',
+      }}
+    />
   );
-};
+};;

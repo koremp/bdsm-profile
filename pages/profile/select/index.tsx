@@ -2,6 +2,7 @@ import { ButtonGroup, Typography } from '@mui/material';
 import { deepPurple } from '@mui/material/colors';
 
 import LinkButton, { LinkButtonProps } from 'src/components/LinkButton';
+import Page from 'src/components/Page';
 
 
 export default function IndexSelectProfilePage() {
@@ -17,8 +18,7 @@ export default function IndexSelectProfilePage() {
   ];
 
   return (
-    <>
-      <Typography variant='h3'>Select Profile</Typography>
+    <Page titleText='Select Profile'>
       <ButtonGroup
         fullWidth
         orientation='vertical'
@@ -40,6 +40,6 @@ export default function IndexSelectProfilePage() {
       >
         <LinkButton href='/' name='back' />
       </ButtonGroup>
-    </>
+    </Page>
   );
 };

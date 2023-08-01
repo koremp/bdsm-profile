@@ -1,13 +1,15 @@
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
+import Page from 'src/components/Page';
 
 export default function SSCGuidePage() {
   return (
-    <>
-      <Typography>SSC</Typography>
-      <Box>
-        <Link href='/guide'>Back</Link>
-      </Box>
-    </>
+    <Page
+      titleText='SSC'
+      bottom={{
+        backHref: '/guide',
+        backName: 'Back',
+        nextHref: '/guide/rack',
+        nextName: 'RACK',
+      }}
+    />
   );
 };
