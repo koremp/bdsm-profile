@@ -4,7 +4,8 @@ import {
 } from '@mui/material'
 
 import Head from 'next/head'
-import Link from 'next/link'
+
+import Bottom from 'src/components/Bottom'
 
 export default function Home() {
   return (
@@ -14,18 +15,18 @@ export default function Home() {
         <meta name="description" content="Index Page of BDSM Profile" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Box>
+      <>
         <Typography variant='h3'>BDSM Profile</Typography>
-        <Box>
+        <Typography>
           Sign In, Sign Out
-          <Link href='/profile/select'>
-            Profile Select
-          </Link>
-          <Link href='/guide'>
-            Guide
-          </Link>
-        </Box>
-      </Box>
+        </Typography>
+        <Bottom
+          backHref='/profile/select'
+          backName='Profile Select'
+          nextHref='/guide'
+          nextName='Guide'
+        />
+      </>
     </>
   )
 }
