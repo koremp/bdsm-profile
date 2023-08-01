@@ -37,6 +37,7 @@ export default function IndexSelectProfilePage() {
           mt: 'auto',
           backgroundColor: `${deepPurple[100]}`
         }}
+        aria-label='bottom button group'
       >
         <LinkButton href='/' name='back' />
       </ButtonGroup>

@@ -6,7 +6,12 @@ import LinkButton from 'src/components/LinkButton';
 export default function CCCCGuidePage() {
   return (
     <Page titleText='CCCC'>
-      <ButtonGroup sx={{ mt: 'auto' }} >
+      <ButtonGroup
+        sx={{ mt: 'auto' }}
+        fullWidth
+        orientation='vertical'
+        aria-label='bottom button group'
+      >
         <LinkButton href='/guide' name='Back' />
       </ButtonGroup>
     </Page>

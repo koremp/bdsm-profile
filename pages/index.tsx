@@ -18,7 +18,12 @@ export default function Home() {
         titleText='BDSM Profile'
       >
         {/* todo: add signin button */}
-        <ButtonGroup sx={{ backgroundColor: `${deepPurple[100]}` }} fullWidth orientation='vertical'>
+        <ButtonGroup
+          sx={{ backgroundColor: `${deepPurple[100]}` }}
+          fullWidth
+          orientation='vertical'
+          aria-label='bdsm profile button group'
+        >
           <LinkButton href='/profile/select' name='Select Profile' />
           <LinkButton href='/guide' name='Guide' />
         </ButtonGroup>
