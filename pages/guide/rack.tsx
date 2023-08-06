@@ -1,4 +1,6 @@
+import { Typography } from '@mui/material';
 import Page from 'src/components/Page';
+import { rack } from 'src/constants/guides';
 
 export default function RACKGuidePage() {
   return (
@@ -10,6 +12,8 @@ export default function RACKGuidePage() {
         nextHref: '/guide/prick',
         nextName: 'PRICK',
       }}
-    />
+    >
+      <Typography>{rack}</Typography>
+    </Page>
   );
 };;

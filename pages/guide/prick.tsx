@@ -1,4 +1,6 @@
+import { Typography } from '@mui/material';
 import Page from 'src/components/Page';
+import { prick } from 'src/constants/guides';
 
 export default function PRICKGuidePage() {
   return (
@@ -10,6 +12,9 @@ export default function PRICKGuidePage() {
         nextHref: '/guide/cnc',
         nextName: 'CNC',
       }}
-    />
+    >
+      <Typography>{prick}</Typography>
+
+    </Page>
   );
 };;

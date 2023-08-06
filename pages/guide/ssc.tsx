@@ -1,4 +1,6 @@
+import { Typography } from '@mui/material';
 import Page from 'src/components/Page';
+import { ssc } from 'src/constants/guides';
 
 export default function SSCGuidePage() {
   return (
@@ -10,6 +12,8 @@ export default function SSCGuidePage() {
         nextHref: '/guide/rack',
         nextName: 'RACK',
       }}
-    />
+    >
+      <Typography>{ssc}</Typography>
+    </Page>
   );
 };
