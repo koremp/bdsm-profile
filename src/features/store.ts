@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+import ageReducer from './ageSlice';
 import bdsmReducer from './bdsmSlice';
 import bdsmChecklistReducer from './bdsmChecklistSlice';
 import genderReducer from './genderSlice';
@@ -11,6 +12,7 @@ import sexualPreferenceReducer from './sexualPreferenceSlice';
 
 const store = configureStore({
   reducer: {
+    age: ageReducer,
     bdsm: bdsmReducer,
     bdsmChecklist: bdsmChecklistReducer,
     gender: genderReducer,
