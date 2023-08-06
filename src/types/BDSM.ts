@@ -3,7 +3,7 @@ import { Information, convertInformation2Obj } from './Information';
 
 export const bdsmArray: readonly Information[] = [
   {
-    text: 'Dominat',
+    text: 'Dominant',
     description: 'Dominants like to be in charge. Some like to have their partner obey them without questioning, others like some resistance while taking it their way. Some are dominant only in the bedroom, others are dominant throughout their daily life as well. Unlike the top roles (giving pain/bondage/degradation), being dominant is more about who decides what happens (and takes the responsibility that comes with it) than about the contents of what happens.',
   },
   {
