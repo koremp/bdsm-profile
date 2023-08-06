@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
 import { ButtonGroup } from '@mui/material'
+import { deepPurple } from '@mui/material/colors'
 
 import LinkButton from 'src/components/LinkButton'
 import Page from 'src/components/Page'
-import { deepPurple } from '@mui/material/colors'
 
 export default function Home() {
   return (
