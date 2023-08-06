@@ -1,4 +1,5 @@
 import Page from 'src/components/Page';
+import Age from 'src/components/select/Age';
 
 export default function AgeSelectProfilePage() {
   return (
@@ -10,6 +11,8 @@ export default function AgeSelectProfilePage() {
         nextHref: '/profile/select/gender',
         nextName: 'Gender'
       }}
-    />
+    >
+      <Age />
+    </Page>
   );
 };
