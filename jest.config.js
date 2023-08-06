@@ -64,6 +64,9 @@ const customJestConfig = {
     'config.js',
     'coverage',
 
+    'hooks.ts',
+    'store.ts',
+
     '_document.tsx',
     '_app.tsx',
     '_error.tsx',
@@ -79,6 +82,9 @@ const customJestConfig = {
 
     '.config.',
     'coverage',
+
+    'hooks.ts',
+    'store.ts',
 
     '_document.tsx',
     '_app.tsx',
