@@ -1,4 +1,6 @@
 import { Box, Typography } from '@mui/material';
+import { deepPurple } from '@mui/material/colors';
+
 import Checklist from './Checklist';
 import { ChecklistValue } from 'src/features/bdsmChecklistSlice';
 import { BDSMType } from 'src/types/bdsm/BDSMChecklist';
@@ -25,7 +27,7 @@ export default function ChecklistGroup({
       <Typography>{groupName}</Typography>
       <Box sx={{
         mt: 2,
-        backgroundColor: '#806967',
+        backgroundColor: `${deepPurple[600]}`,
         borderRadius: '1rem',
       }}>
         {
