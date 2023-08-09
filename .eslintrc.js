@@ -1,14 +1,15 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest/globals": true
-  },
+  "root": "true",
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript"
   ],
+  "plugins": [
+    "testing-library",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
   "overrides": [
     {
       "files": [
@@ -25,38 +26,24 @@ module.exports = {
       }
     },
   ],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "tsconfig.eslint.js"
+    "project": "tsconfig.json"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
   "rules": {
-    "indent": [
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+    "import/extensions": [
       "error",
-      "tab"
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "double"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ]
+    "react/require-default-props": "off",
+    "@typescript-eslint/naming-convention": "off"
   },
-  "overrides": [
-    {
-      "files": ["**/__tests__/*.test.ts", "**/__tests__/*.test.tsx"],
-      "env": { "jest": true, "node": true },
-    }
-  ]
 };
