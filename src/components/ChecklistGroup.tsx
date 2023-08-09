@@ -32,7 +32,7 @@ export default function ChecklistGroup({
           typeArray.map((item, index) => {
             const type = item;
             return (
-              <Box>
+              <Box key={item}>
                 <Typography>{item}</Typography>
                 <Checklist
                   label={item}
