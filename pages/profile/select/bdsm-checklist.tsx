@@ -1,11 +1,4 @@
-import {
-  Box,
-  Typography,
-} from '@mui/material';
-
 import { useDispatch, useSelector } from 'react-redux';
-
-import Link from 'next/link';
 
 import { Erogenous, erogenousArray } from 'src/types/bdsm/Erogenous';
 import { Worship, worshipArray } from 'src/types/bdsm/Worship';
@@ -49,9 +42,9 @@ import {
 } from 'src/features/bdsmChecklistSlice';
 
 import ChecklistGroup from 'src/components/ChecklistGroup';
-import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
-import Bottom from 'src/components/Bottom';
 import Page from 'src/components/Page';
+
+import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
 
 export default function bdsmChecklist() {
   const dispatch = useDispatch();
