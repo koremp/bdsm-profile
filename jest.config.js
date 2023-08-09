@@ -1,6 +1,6 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  collectCoverageForm: [
+  collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
