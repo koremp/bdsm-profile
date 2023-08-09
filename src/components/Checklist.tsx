@@ -35,7 +35,7 @@ export default function Checklist({
       >
         {
           Array.from({ length: 5 }, (_, i) => i + 1).map((n) => (
-            <FormControlLabel value={n} control={<Radio />} label={n} />
+            <FormControlLabel key={`label - ` + n} value={n} control={<Radio />} label={n} />
           ))
         }
         <Button onClick={() => handleChange({ isMe: true, value: 0 })}>Remove</Button>
@@ -49,7 +49,7 @@ export default function Checklist({
       >
         {
           Array.from({ length: 5 }, (_, i) => i + 1).map((n) => (
-            <FormControlLabel value={n} control={<Radio />} label={n} />
+            <FormControlLabel key={`label - ` + n} value={n} control={<Radio />} label={n} />
           ))
         }
         <Button onClick={() => handleChange({ isMe: false, value: 0 })}>Remove</Button>
