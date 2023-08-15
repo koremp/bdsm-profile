@@ -2,6 +2,6 @@ import { render } from '@testing-library/react';
 
 import BDSMChecklist from 'pages/profile/select/bdsm-checklist';
 
-test('BDSM Checklist', () => {
+test('Profile Select BDSM Checklist Page', () => {
   render(<BDSMChecklist />);
 });

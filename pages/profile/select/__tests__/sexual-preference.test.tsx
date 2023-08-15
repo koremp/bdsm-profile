@@ -2,6 +2,6 @@ import { render } from '@testing-library/react';
 
 import SexualPreference from 'pages/profile/select/sexual-preference';
 
-test('Sexual Preference', () => {
+test('Profile Select Sexual Preference Page', () => {
   render(<SexualPreference />);
 });

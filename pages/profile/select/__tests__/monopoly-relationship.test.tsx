@@ -2,6 +2,6 @@ import { render } from '@testing-library/react';
 
 import MonopolyRelationship from 'pages/profile/select/monopoly-relationship';
 
-test('Monopoly Relationship', () => {
+test('Profile Select Monopoly Relationship Page', () => {
   render(<MonopolyRelationship />);
 });
