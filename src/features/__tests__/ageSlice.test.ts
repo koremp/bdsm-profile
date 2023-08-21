@@ -2,18 +2,11 @@ import {
   toggleExistAge,
   setAge,
   setDescription,
-  getExistAge,
-  getAge,
-  getDescription,
 } from 'src/features/ageSlice';
 
-import reducer from 'src/features/ageSlice';
+import reducer, { AgeState } from 'src/features/ageSlice';
 
-import { SingleProps } from 'src/types/Props';
-
-import prepareMockReduxWrapper from 'src/features/__tests__/prepareMockReduxWrapper';
-
-const defaultState: SingleProps<string> = {
+const defaultState: AgeState = {
   exist: false,
   value: undefined,
   other: '',
@@ -59,52 +52,6 @@ describe('ageSlice', () => {
         const state = reducer(initialState, setDescription(desc));
 
         expect(state.desc).toEqual(desc);
-      });
-    });
-
-    describe('getExistAge', () => {
-      let store: any;
-
-      beforeEach(() => {
-        const [_, store] = prepareMockReduxWrapper();
-
-        store({
-
-        })
-      });
-
-      it('gets existAge.', () => {
-        const exist = store.getExistAge({});
-
-        expect(exist).toEqual(false);
-      });
-    });
-
-    describe('getAge', () => {
-      let store: any;
-
-      beforeEach(() => {
-        store = prepareMockReduxWrapper();
-      });
-
-      it('gets age.', () => {
-        const age = store.getAge();
-
-        expect(age).toEqual(undefined);
-      });
-    });
-
-    describe('getDescription', () => {
-      let store: any;
-
-      beforeEach(() => {
-        store = prepareMockReduxWrapper();
-      });
-
-      it('gets description.', () => {
-        const desc = store.getDescription();
-
-        expect(desc).toEqual('');
       });
     });
   });
