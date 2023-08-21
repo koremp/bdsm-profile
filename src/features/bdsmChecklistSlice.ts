@@ -87,7 +87,7 @@ export const initialState: BDSMChecklistState = {
   anal: analArray.map(_ => defaultChecklistValue),
 };
 
-const spliceChecklist = (array: ChecklistValue[], isMe: boolean, value: number, type: BDSMType, index: number) => {
+export const spliceChecklist = (array: ChecklistValue[], isMe: boolean, value: number, type: BDSMType, index: number) => {
   const { me, you } = array[index];
 
   if (isMe) {
