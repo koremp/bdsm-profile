@@ -24,7 +24,8 @@ describe('genderSlice', () => {
 
   describe('setGender', () => {
     it('sets value.', () => {
-      expect(reducer({ ...initialState }, setGender(Gender.Female)).value).toEqual(initialState.value);
+      const value: Gender = Gender.Female;
+      expect(reducer({ ...initialState }, setGender(Gender.Female)).value).toEqual(value);
     });
   });
 
