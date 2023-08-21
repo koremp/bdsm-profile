@@ -6,7 +6,7 @@ import {
 
 import ageReducer from './ageSlice';
 import bdsmReducer from './bdsmSlice';
-import bdsmChecklistReducer from './bdsmChecklistSlice';
+import bdsmChecklistReducer, { initialState as bdsmInitialState } from './bdsmChecklistSlice';
 import genderReducer from './genderSlice';
 import monopolyRelationshipReducer from './monopolyRelationshipSlice';
 import powerExchangeReducer from './powerExchangeSlice';
@@ -36,3 +36,55 @@ export function setupStore(preloadedState?: PreloadedState<RootState>) {
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
 export type AppDispatch = AppStore['dispatch'];
+
+export const rootState: RootState = {
+  age: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+  bdsm: {
+    exist: false,
+    values: [],
+    others: [],
+    desc: '',
+  },
+  bdsmChecklist: bdsmInitialState,
+  gender: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+  monopolyRelationship: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+  powerExchange: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+  relationshipPreference: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+  romanticPreference: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+  sexualPreference: {
+    exist: false,
+    value: undefined,
+    other: '',
+    desc: '',
+  },
+};
