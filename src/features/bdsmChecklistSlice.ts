@@ -40,7 +40,7 @@ export interface ChecklistActionT {
   checklist: BDSMChecklist
 };
 
-interface InitialState {
+export interface BDSMChecklistState {
   erogenous: ChecklistValue[]
   worship: ChecklistValue[]
   soft: ChecklistValue[]
@@ -66,7 +66,7 @@ const defaultChecklistValue: ChecklistValue = {
   you: 0,
 };
 
-const initialState: InitialState = {
+export const initialState: BDSMChecklistState = {
   erogenous: erogenousArray.map(_ => defaultChecklistValue),
   worship: worshipArray.map(_ => defaultChecklistValue),
   soft: softArray.map(_ => defaultChecklistValue),

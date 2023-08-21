@@ -3,7 +3,9 @@ import type { RootState } from './store';
 
 import { BDSM, BDSMProperty } from 'src/types/BDSM';
 
-const initialState: BDSMProperty = {
+export interface BDSMState extends BDSMProperty { };
+
+const initialState: BDSMState = {
   exist: false,
   values: [],
   others: [],

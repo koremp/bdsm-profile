@@ -3,8 +3,9 @@ import type { RootState } from './store';
 
 import { RomanticPreference, RomanticPrefenceProperty } from 'src/types/RomanticPreference';
 
-// Define the initial state using that type
-const initialState: RomanticPrefenceProperty = {
+export interface RomanticPreferenceState extends RomanticPrefenceProperty { };
+
+const initialState: RomanticPreferenceState = {
   exist: false,
   value: undefined,
   other: '',

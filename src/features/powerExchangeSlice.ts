@@ -3,7 +3,9 @@ import type { RootState } from './store';
 
 import { PowerExchange, PowerExchangeProperty } from 'src/types/PowerExchange';
 
-const initialState: PowerExchangeProperty = {
+export interface PowerExchangeState extends PowerExchangeProperty { };
+
+const initialState: PowerExchangeState = {
   exist: false,
   value: undefined,
   other: '',

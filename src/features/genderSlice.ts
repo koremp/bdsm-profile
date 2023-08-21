@@ -6,7 +6,9 @@ import {
   GenderProperty,
 } from 'src/types/Gender';
 
-const initialState: GenderProperty = {
+export interface GenderState extends GenderProperty { };
+
+const initialState: GenderState = {
   exist: false,
   value: undefined,
   other: '',

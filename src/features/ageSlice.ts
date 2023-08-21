@@ -3,7 +3,9 @@ import type { RootState } from './store';
 
 import { SingleProps } from 'src/types/Props';
 
-const initialState: SingleProps<string> = {
+export interface AgeState extends SingleProps<string> { }
+
+const initialState: AgeState = {
   exist: false,
   value: undefined,
   other: '',

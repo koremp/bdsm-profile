@@ -3,7 +3,9 @@ import type { RootState } from './store';
 
 import { SexualPreference, SexualPreferenceProperty } from 'src/types/SexualPreference';
 
-const initialState: SexualPreferenceProperty = {
+export interface SexualPreferenceState extends SexualPreferenceProperty { };
+
+const initialState: SexualPreferenceState = {
   exist: false,
   value: undefined,
   other: '',
