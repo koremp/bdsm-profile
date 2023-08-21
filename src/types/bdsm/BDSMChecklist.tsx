@@ -60,6 +60,27 @@ export const bdsmChecklistArray: BDSMChecklist[] = [
   BDSMChecklist.Anal,
 ];
 
+export {
+  Erogenous,
+  Worship,
+  Soft,
+  Mental,
+  Physical,
+  Dirty,
+  Tool,
+  Bondage,
+  Wax,
+  Spanking,
+  Roleplay,
+  Film,
+  Outdoor,
+  Multiplay,
+  NonPenetration,
+  SexualPosition,
+  Oral,
+  Anal,
+};
+
 export type BDSMType = Erogenous
   | Worship
   | Soft
