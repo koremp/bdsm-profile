@@ -8,7 +8,7 @@ import { MonopolyRelationship, MonopolyRelationshipProperty } from 'src/types/Mo
 
 export interface MonopolyRelationshipState extends MonopolyRelationshipProperty { };
 
-const initialState: MonopolyRelationshipState = {
+export const initialState: MonopolyRelationshipState = {
   exist: false,
   value: undefined,
   other: '',
