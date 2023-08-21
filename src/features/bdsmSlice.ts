@@ -5,7 +5,7 @@ import { BDSM, BDSMProperty } from 'src/types/BDSM';
 
 export interface BDSMState extends BDSMProperty { };
 
-const initialState: BDSMState = {
+export const initialState: BDSMState = {
   exist: false,
   values: [],
   others: [],
