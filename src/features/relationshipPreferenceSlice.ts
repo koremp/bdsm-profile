@@ -5,7 +5,7 @@ import { RelationshipPreference, RelationshipPrefenceProperty } from 'src/types/
 
 export interface RelationshipState extends RelationshipPrefenceProperty { };
 
-const initialState: RelationshipState = {
+export const initialState: RelationshipState = {
   exist: false,
   value: undefined,
   other: '',

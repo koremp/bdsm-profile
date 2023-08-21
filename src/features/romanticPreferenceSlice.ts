@@ -5,7 +5,7 @@ import { RomanticPreference, RomanticPrefenceProperty } from 'src/types/Romantic
 
 export interface RomanticPreferenceState extends RomanticPrefenceProperty { };
 
-const initialState: RomanticPreferenceState = {
+export const initialState: RomanticPreferenceState = {
   exist: false,
   value: undefined,
   other: '',

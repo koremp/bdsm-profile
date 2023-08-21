@@ -5,7 +5,7 @@ import { SexualPreference, SexualPreferenceProperty } from 'src/types/SexualPref
 
 export interface SexualPreferenceState extends SexualPreferenceProperty { };
 
-const initialState: SexualPreferenceState = {
+export const initialState: SexualPreferenceState = {
   exist: false,
   value: undefined,
   other: '',

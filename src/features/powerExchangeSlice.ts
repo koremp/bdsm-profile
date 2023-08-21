@@ -5,7 +5,7 @@ import { PowerExchange, PowerExchangeProperty } from 'src/types/PowerExchange';
 
 export interface PowerExchangeState extends PowerExchangeProperty { };
 
-const initialState: PowerExchangeState = {
+export const initialState: PowerExchangeState = {
   exist: false,
   value: undefined,
   other: '',
