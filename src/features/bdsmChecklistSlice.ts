@@ -109,61 +109,59 @@ export const bdsmChecklistSlice = createSlice({
 
       if (checklist === BDSMChecklist.Erogenous) {
         index = erogenousArray.indexOf(type);
-        array = state.erogenous;
+        spliceChecklist(state.erogenous, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Worship) {
         index = worshipArray.indexOf(type);
-        array = state.worship;
+        spliceChecklist(state.worship, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Soft) {
         index = softArray.indexOf(type);
-        array = state.soft;
+        spliceChecklist(state.soft, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Mental) {
         index = mentalArray.indexOf(type);
-        array = state.mental;
+        spliceChecklist(state.mental, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Physical) {
         index = physicalArray.indexOf(type);
-        array = state.physical;
+        spliceChecklist(state.physical, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Dirty) {
         index = dirtyArray.indexOf(type);
-        array = state.dirty;
+        spliceChecklist(state.dirty, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Tool) {
         index = toolArray.indexOf(type);
-        array = state.tool;
+        spliceChecklist(state.tool, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Bondage) {
         index = bondageArray.indexOf(type);
-        array = state.bondage;
+        spliceChecklist(state.bondage, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Wax) {
         index = waxArray.indexOf(type);
-        array = state.wax;
+        spliceChecklist(state.wax, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Spanking) {
         index = spankingArray.indexOf(type);
-        array = state.spanking;
+        spliceChecklist(state.spanking, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Roleplay) {
         index = roleplayArray.indexOf(type);
-        array = state.roleplay;
+        spliceChecklist(state.roleplay, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Film) {
         index = filmArray.indexOf(type);
-        array = state.film;
+        spliceChecklist(state.film, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Outdoor) {
         index = outdoorArray.indexOf(type);
-        array = state.outdoor;
+        spliceChecklist(state.outdoor, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Multiplay) {
         index = multiplayArray.indexOf(type);
-        array = state.multiplay;
+        spliceChecklist(state.multiplay, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.NonPenetration) {
         index = nonPenetrationArray.indexOf(type);
-        array = state.nonPenetration;
+        spliceChecklist(state.nonPenetration, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.SexualPosition) {
         index = sexualPositionArray.indexOf(type);
-        array = state.sexualPosition;
+        spliceChecklist(state.sexualPosition, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Oral) {
         index = oralArray.indexOf(type);
-        array = state.oral;
+        spliceChecklist(state.oral, isMe, value, type, index);
       } else if (checklist === BDSMChecklist.Anal) {
         index = analArray.indexOf(type);
-        array = state.oral;
+        spliceChecklist(state.anal, isMe, value, type, index);
       }
-
-      spliceChecklist(array, isMe, value, type, index);
     },
   },
 });
