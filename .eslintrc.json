@@ -1,4 +1,4 @@
-module.exports = {
+{
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -16,19 +16,26 @@ module.exports = {
       ],
       "env": {
         "jest": true,
-        "jest/globals": true,
+        "jest/globals": true
       },
       "globals": {
         "context": "readonly"
       },
-      "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"],
+      "plugins": [
+        "jest"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
       "rules": {
         "jest/expect-expect": "off"
       }
-    },
+    }
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-};
+  "rules": {
+    "react/react-in-jsx-scope": 0
+  }
+}
