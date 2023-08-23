@@ -36,6 +36,8 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/no-redeclare": 0,
+    "no-param-reassign": 0
   }
 }
