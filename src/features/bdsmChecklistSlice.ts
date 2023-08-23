@@ -1,31 +1,31 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
 
-import { Erogenous, erogenousArray } from 'src/types/bdsm/Erogenous';
-import { Worship, worshipArray } from 'src/types/bdsm/Worship';
-import { Soft, softArray } from 'src/types/bdsm/sadism/Soft';
-import { Mental, mentalArray } from 'src/types/bdsm/sadism/Mental';
-import { Physical, physicalArray } from 'src/types/bdsm/sadism/Physical';
-import { Dirty, dirtyArray } from 'src/types/bdsm/sadism/Dirty';
-import { Tool, toolArray } from 'src/types/bdsm/Tool';
-import { Bondage, bondageArray } from 'src/types/bdsm/Bondage';
-import { Wax, waxArray } from 'src/types/bdsm/Wax';
-import { Spanking, spankingArray } from 'src/types/bdsm/Spanking';
-import { Roleplay, roleplayArray } from 'src/types/bdsm/Roleplay';
-import { Film, filmArray } from 'src/types/bdsm/Film';
-import { Outdoor, outdoorArray } from 'src/types/bdsm/Outdoor';
-import { Multiplay, multiplayArray } from 'src/types/bdsm/Multiplay';
-import { NonPenetration, nonPenetrationArray } from 'src/types/bdsm/NonPenetration';
-import { SexualPosition, sexualPositionArray } from 'src/types/bdsm/SexualPosition';
-import { Oral, oralArray } from 'src/types/bdsm/Oral';
-import { Anal, analArray } from 'src/types/bdsm/Anal';
+import { erogenousArray } from 'src/types/bdsm/Erogenous';
+import { worshipArray } from 'src/types/bdsm/Worship';
+import { softArray } from 'src/types/bdsm/sadism/Soft';
+import { mentalArray } from 'src/types/bdsm/sadism/Mental';
+import { physicalArray } from 'src/types/bdsm/sadism/Physical';
+import { dirtyArray } from 'src/types/bdsm/sadism/Dirty';
+import { toolArray } from 'src/types/bdsm/Tool';
+import { bondageArray } from 'src/types/bdsm/Bondage';
+import { waxArray } from 'src/types/bdsm/Wax';
+import { spankingArray } from 'src/types/bdsm/Spanking';
+import { roleplayArray } from 'src/types/bdsm/Roleplay';
+import { filmArray } from 'src/types/bdsm/Film';
+import { outdoorArray } from 'src/types/bdsm/Outdoor';
+import { multiplayArray } from 'src/types/bdsm/Multiplay';
+import { nonPenetrationArray } from 'src/types/bdsm/NonPenetration';
+import { sexualPositionArray } from 'src/types/bdsm/SexualPosition';
+import { oralArray } from 'src/types/bdsm/Oral';
+import { analArray } from 'src/types/bdsm/Anal';
 import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
+
+import type { RootState } from './store';
 
 export interface ChecklistValue {
   me: number
   you: number
 }
-
 
 export interface ChecklistAction {
   isMe: boolean
@@ -67,27 +67,32 @@ const defaultChecklistValue: ChecklistValue = {
 };
 
 export const initialState: BDSMChecklistState = {
-  erogenous: erogenousArray.map(_ => defaultChecklistValue),
-  worship: worshipArray.map(_ => defaultChecklistValue),
-  soft: softArray.map(_ => defaultChecklistValue),
-  mental: mentalArray.map(_ => defaultChecklistValue),
-  physical: physicalArray.map(_ => defaultChecklistValue),
-  dirty: dirtyArray.map(_ => defaultChecklistValue),
-  tool: toolArray.map(_ => defaultChecklistValue),
-  bondage: bondageArray.map(_ => defaultChecklistValue),
-  wax: waxArray.map(_ => defaultChecklistValue),
-  spanking: spankingArray.map(_ => defaultChecklistValue),
-  roleplay: roleplayArray.map(_ => defaultChecklistValue),
-  film: filmArray.map(_ => defaultChecklistValue),
-  outdoor: outdoorArray.map(_ => defaultChecklistValue),
-  multiplay: multiplayArray.map(_ => defaultChecklistValue),
-  nonPenetration: nonPenetrationArray.map(_ => defaultChecklistValue),
-  sexualPosition: sexualPositionArray.map(_ => defaultChecklistValue),
-  oral: oralArray.map(_ => defaultChecklistValue),
-  anal: analArray.map(_ => defaultChecklistValue),
+  erogenous: erogenousArray.map(() => defaultChecklistValue),
+  worship: worshipArray.map(() => defaultChecklistValue),
+  soft: softArray.map(() => defaultChecklistValue),
+  mental: mentalArray.map(() => defaultChecklistValue),
+  physical: physicalArray.map(() => defaultChecklistValue),
+  dirty: dirtyArray.map(() => defaultChecklistValue),
+  tool: toolArray.map(() => defaultChecklistValue),
+  bondage: bondageArray.map(() => defaultChecklistValue),
+  wax: waxArray.map(() => defaultChecklistValue),
+  spanking: spankingArray.map(() => defaultChecklistValue),
+  roleplay: roleplayArray.map(() => defaultChecklistValue),
+  film: filmArray.map(() => defaultChecklistValue),
+  outdoor: outdoorArray.map(() => defaultChecklistValue),
+  multiplay: multiplayArray.map(() => defaultChecklistValue),
+  nonPenetration: nonPenetrationArray.map(() => defaultChecklistValue),
+  sexualPosition: sexualPositionArray.map(() => defaultChecklistValue),
+  oral: oralArray.map(() => defaultChecklistValue),
+  anal: analArray.map(() => defaultChecklistValue),
 };
 
-export const spliceChecklist = (array: ChecklistValue[], isMe: boolean, value: number, type: BDSMType, index: number) => {
+export const spliceChecklist = (
+  array: ChecklistValue[],
+  isMe: boolean,
+  value: number,
+  index: number,
+) => {
   const { me, you } = array[index];
 
   if (isMe) {
@@ -102,65 +107,66 @@ export const bdsmChecklistSlice = createSlice({
   initialState,
   reducers: {
     setChecklist: (state, action: PayloadAction<ChecklistActionT>) => {
-      const { isMe, value, type, checklist } = action.payload;
+      const {
+        isMe, value, type, checklist,
+      } = action.payload;
 
       let index: number = -1;
-      let array: ChecklistValue[] = [];
 
       if (checklist === BDSMChecklist.Erogenous) {
         index = erogenousArray.indexOf(type);
-        spliceChecklist(state.erogenous, isMe, value, type, index);
+        spliceChecklist(state.erogenous, isMe, value, index);
       } else if (checklist === BDSMChecklist.Worship) {
         index = worshipArray.indexOf(type);
-        spliceChecklist(state.worship, isMe, value, type, index);
+        spliceChecklist(state.worship, isMe, value, index);
       } else if (checklist === BDSMChecklist.Soft) {
         index = softArray.indexOf(type);
-        spliceChecklist(state.soft, isMe, value, type, index);
+        spliceChecklist(state.soft, isMe, value, index);
       } else if (checklist === BDSMChecklist.Mental) {
         index = mentalArray.indexOf(type);
-        spliceChecklist(state.mental, isMe, value, type, index);
+        spliceChecklist(state.mental, isMe, value, index);
       } else if (checklist === BDSMChecklist.Physical) {
         index = physicalArray.indexOf(type);
-        spliceChecklist(state.physical, isMe, value, type, index);
+        spliceChecklist(state.physical, isMe, value, index);
       } else if (checklist === BDSMChecklist.Dirty) {
         index = dirtyArray.indexOf(type);
-        spliceChecklist(state.dirty, isMe, value, type, index);
+        spliceChecklist(state.dirty, isMe, value, index);
       } else if (checklist === BDSMChecklist.Tool) {
         index = toolArray.indexOf(type);
-        spliceChecklist(state.tool, isMe, value, type, index);
+        spliceChecklist(state.tool, isMe, value, index);
       } else if (checklist === BDSMChecklist.Bondage) {
         index = bondageArray.indexOf(type);
-        spliceChecklist(state.bondage, isMe, value, type, index);
+        spliceChecklist(state.bondage, isMe, value, index);
       } else if (checklist === BDSMChecklist.Wax) {
         index = waxArray.indexOf(type);
-        spliceChecklist(state.wax, isMe, value, type, index);
+        spliceChecklist(state.wax, isMe, value, index);
       } else if (checklist === BDSMChecklist.Spanking) {
         index = spankingArray.indexOf(type);
-        spliceChecklist(state.spanking, isMe, value, type, index);
+        spliceChecklist(state.spanking, isMe, value, index);
       } else if (checklist === BDSMChecklist.Roleplay) {
         index = roleplayArray.indexOf(type);
-        spliceChecklist(state.roleplay, isMe, value, type, index);
+        spliceChecklist(state.roleplay, isMe, value, index);
       } else if (checklist === BDSMChecklist.Film) {
         index = filmArray.indexOf(type);
-        spliceChecklist(state.film, isMe, value, type, index);
+        spliceChecklist(state.film, isMe, value, index);
       } else if (checklist === BDSMChecklist.Outdoor) {
         index = outdoorArray.indexOf(type);
-        spliceChecklist(state.outdoor, isMe, value, type, index);
+        spliceChecklist(state.outdoor, isMe, value, index);
       } else if (checklist === BDSMChecklist.Multiplay) {
         index = multiplayArray.indexOf(type);
-        spliceChecklist(state.multiplay, isMe, value, type, index);
+        spliceChecklist(state.multiplay, isMe, value, index);
       } else if (checklist === BDSMChecklist.NonPenetration) {
         index = nonPenetrationArray.indexOf(type);
-        spliceChecklist(state.nonPenetration, isMe, value, type, index);
+        spliceChecklist(state.nonPenetration, isMe, value, index);
       } else if (checklist === BDSMChecklist.SexualPosition) {
         index = sexualPositionArray.indexOf(type);
-        spliceChecklist(state.sexualPosition, isMe, value, type, index);
+        spliceChecklist(state.sexualPosition, isMe, value, index);
       } else if (checklist === BDSMChecklist.Oral) {
         index = oralArray.indexOf(type);
-        spliceChecklist(state.oral, isMe, value, type, index);
+        spliceChecklist(state.oral, isMe, value, index);
       } else if (checklist === BDSMChecklist.Anal) {
         index = analArray.indexOf(type);
-        spliceChecklist(state.anal, isMe, value, type, index);
+        spliceChecklist(state.anal, isMe, value, index);
       }
     },
   },
