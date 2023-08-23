@@ -24,21 +24,21 @@ import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
 export interface ChecklistValue {
   me: number
   you: number
-};
+}
 
 
 export interface ChecklistAction {
   isMe: boolean
   value: number
   type: BDSMType
-};
+}
 
 export interface ChecklistActionT {
   isMe: boolean
   value: number
   type: BDSMType
   checklist: BDSMChecklist
-};
+}
 
 export interface BDSMChecklistState {
   erogenous: ChecklistValue[]
@@ -59,7 +59,7 @@ export interface BDSMChecklistState {
   sexualPosition: ChecklistValue[]
   oral: ChecklistValue[]
   anal: ChecklistValue[]
-};
+}
 
 const defaultChecklistValue: ChecklistValue = {
   me: 0,
@@ -94,7 +94,7 @@ export const spliceChecklist = (array: ChecklistValue[], isMe: boolean, value: n
     array.splice(index, 1, { me: value, you });
   } else {
     array.splice(index, 1, { me, you: value });
-  };
+  }
 };
 
 export const bdsmChecklistSlice = createSlice({

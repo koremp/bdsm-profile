@@ -14,7 +14,7 @@ export interface ChecklistProps {
   me: number
   you: number
   handleChange: ({ isMe, value }: { isMe: boolean, value: number }) => void
-};
+}
 
 export default function Checklist({
   label,
@@ -56,4 +56,4 @@ export default function Checklist({
       </RadioGroup >
     </FormControl >
   );
-};
+}

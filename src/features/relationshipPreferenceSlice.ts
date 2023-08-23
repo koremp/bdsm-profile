@@ -3,7 +3,7 @@ import type { RootState } from './store';
 
 import { RelationshipPreference, RelationshipPrefenceProperty } from 'src/types/RelationshipPreference';
 
-export interface RelationshipState extends RelationshipPrefenceProperty { };
+export interface RelationshipState extends RelationshipPrefenceProperty { }
 
 export const initialState: RelationshipState = {
   exist: false,

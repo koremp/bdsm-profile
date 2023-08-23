@@ -36,4 +36,4 @@ export type RelationshipPreference = typeof relationshipPreferenceArray[number][
 
 export const RelationshipPreference = convertInformation2Obj(relationshipPreferenceArray);
 
-export interface RelationshipPrefenceProperty extends SingleProps<RelationshipPreference> { };
+export interface RelationshipPrefenceProperty extends SingleProps<RelationshipPreference> { }

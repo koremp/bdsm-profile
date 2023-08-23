@@ -3,7 +3,7 @@ import type { RootState } from './store';
 
 import { BDSM, BDSMProperty } from 'src/types/BDSM';
 
-export interface BDSMState extends BDSMProperty { };
+export interface BDSMState extends BDSMProperty { }
 
 export const initialState: BDSMState = {
   exist: false,

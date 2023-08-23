@@ -16,4 +16,4 @@ export default function CNCGuidePage() {
       <Typography>{cnc}</Typography>
     </Page>
   );
-};;
+}

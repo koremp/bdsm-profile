@@ -22,7 +22,7 @@ export const ageSlice = createSlice({
         state.value = undefined;
         state.other = '';
         state.desc == '';
-      };
+      }
     },
     setAge: (state, action: PayloadAction<string>) => {
       const selected: string = action.payload;

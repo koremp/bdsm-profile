@@ -15,4 +15,4 @@ export default function AgeSelectProfilePage() {
       <Age />
     </Page>
   );
-};
+}

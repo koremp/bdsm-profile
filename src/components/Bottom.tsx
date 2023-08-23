@@ -8,7 +8,7 @@ export interface BottomProps {
   backName: string
   nextHref: string
   nextName: string
-};
+}
 
 export default function Bottom({
   backHref,
@@ -30,4 +30,4 @@ export default function Bottom({
       <LinkButton href={nextHref} name={nextName} />
     </ButtonGroup>
   );
-};
+}

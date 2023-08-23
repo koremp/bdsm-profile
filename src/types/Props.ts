@@ -1,7 +1,7 @@
 interface Props {
   exist: boolean;
   desc: string;
-};
+}
 
 export interface SingleProps<T> extends Props {
   value: T | undefined;

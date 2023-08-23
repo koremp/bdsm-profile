@@ -14,4 +14,4 @@ export default function GenderSelectProfilePage() {
       <GenderComponent />
     </Page >
   );
-};
+}

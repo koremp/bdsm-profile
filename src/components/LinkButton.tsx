@@ -4,7 +4,7 @@ import Link from 'next/link';
 export interface LinkButtonProps {
   href: string
   name: string
-};
+}
 
 export default function LinkButton({ href, name }: LinkButtonProps) {
   return (
@@ -14,4 +14,4 @@ export default function LinkButton({ href, name }: LinkButtonProps) {
       </Link>
     </Button>
   );
-};
+}

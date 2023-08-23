@@ -3,7 +3,7 @@ import type { RootState } from './store';
 
 import { RomanticPreference, RomanticPrefenceProperty } from 'src/types/RomanticPreference';
 
-export interface RomanticPreferenceState extends RomanticPrefenceProperty { };
+export interface RomanticPreferenceState extends RomanticPrefenceProperty { }
 
 export const initialState: RomanticPreferenceState = {
   exist: false,

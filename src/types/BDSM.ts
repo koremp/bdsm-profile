@@ -100,4 +100,4 @@ export type BDSM = typeof bdsmArray[number]['text'];
 
 export const BDSM = convertInformation2Obj(bdsmArray);
 
-export interface BDSMProperty extends MultipleProps<BDSM> { };
+export interface BDSMProperty extends MultipleProps<BDSM> { }

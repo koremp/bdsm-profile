@@ -48,4 +48,4 @@ export type RomanticPreference = typeof romanticPreferenceArray[number]['text'];
 
 export const RomanticPreference = convertInformation2Obj(romanticPreferenceArray);
 
-export interface RomanticPrefenceProperty extends SingleProps<RomanticPreference> { };
+export interface RomanticPrefenceProperty extends SingleProps<RomanticPreference> { }

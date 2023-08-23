@@ -56,4 +56,4 @@ export type MonopolyRelationship = typeof monopolyRelationshipArray[number]['tex
 
 export const MonopolyRelationship = convertInformation2Obj(monopolyRelationshipArray);
 
-export interface MonopolyRelationshipProperty extends SingleProps<MonopolyRelationship> { };
+export interface MonopolyRelationshipProperty extends SingleProps<MonopolyRelationship> { }

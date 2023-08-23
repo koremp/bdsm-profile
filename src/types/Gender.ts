@@ -76,4 +76,4 @@ export type Gender = typeof genderArray[number]['text'];
 
 export const Gender = convertInformation2Obj(genderArray);
 
-export interface GenderProperty extends SingleProps<Gender> { };
+export interface GenderProperty extends SingleProps<Gender> { }

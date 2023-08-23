@@ -3,7 +3,7 @@ import type { RootState } from './store';
 
 import { SexualPreference, SexualPreferenceProperty } from 'src/types/SexualPreference';
 
-export interface SexualPreferenceState extends SexualPreferenceProperty { };
+export interface SexualPreferenceState extends SexualPreferenceProperty { }
 
 export const initialState: SexualPreferenceState = {
   exist: false,

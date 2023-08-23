@@ -56,4 +56,4 @@ export type SexualPreference = typeof sexualPreferenceArray[number]['text'];
 
 export const SexualPreference = convertInformation2Obj(sexualPreferenceArray);
 
-export interface SexualPreferenceProperty extends SingleProps<SexualPreference> { };
+export interface SexualPreferenceProperty extends SingleProps<SexualPreference> { }

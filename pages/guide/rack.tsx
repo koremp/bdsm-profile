@@ -16,4 +16,4 @@ export default function RACKGuidePage() {
       <Typography>{rack}</Typography>
     </Page>
   );
-};;
+}

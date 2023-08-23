@@ -5,7 +5,7 @@ interface InputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyDown?: KeyboardEventHandler<HTMLDivElement>;
-};
+}
 
 export default function Input({
   value,
@@ -20,4 +20,4 @@ export default function Input({
       onKeyDown={onKeyDown}
     />
   );
-};
+}

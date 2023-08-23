@@ -6,7 +6,7 @@ import { MonopolyRelationship, MonopolyRelationshipProperty } from 'src/types/Mo
 // Define a type for the slice state
 // Define the initial state using that type
 
-export interface MonopolyRelationshipState extends MonopolyRelationshipProperty { };
+export interface MonopolyRelationshipState extends MonopolyRelationshipProperty { }
 
 export const initialState: MonopolyRelationshipState = {
   exist: false,

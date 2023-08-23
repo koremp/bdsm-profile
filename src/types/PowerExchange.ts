@@ -32,4 +32,4 @@ export type PowerExchange = typeof powerExchangeArray[number]['text'];
 
 export const PowerExchange = convertInformation2Obj(powerExchangeArray);
 
-export interface PowerExchangeProperty extends SingleProps<PowerExchange> { };
+export interface PowerExchangeProperty extends SingleProps<PowerExchange> { }

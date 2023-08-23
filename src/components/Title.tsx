@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 
 export interface TitleProps {
   text: string
-};
+}
 
 export default function Title({ text }: TitleProps) {
   return (
@@ -14,4 +14,4 @@ export default function Title({ text }: TitleProps) {
       {text}
     </Typography>
   );
-};
+}

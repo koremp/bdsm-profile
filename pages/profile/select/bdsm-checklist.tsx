@@ -52,7 +52,7 @@ export interface Item {
   typeArray: string[]
   checklistArray: ChecklistValue[]
   checklist: BDSMChecklist
-};
+}
 
 
 export default function bdsmChecklist() {
@@ -222,4 +222,4 @@ export default function bdsmChecklist() {
       }
     </Page>
   );
-};
+}

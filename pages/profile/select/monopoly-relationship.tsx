@@ -15,4 +15,4 @@ export default function MonopolyRelationshipSelectProfilePage() {
       <MonopolyRelationshipComponent />
     </Page>
   );
-};
+}

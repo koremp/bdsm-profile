@@ -16,4 +16,4 @@ export default function SSCGuidePage() {
       <Typography>{ssc}</Typography>
     </Page>
   );
-};
+}

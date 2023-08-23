@@ -5,7 +5,7 @@ export interface PageProps {
   titleText: string
   children?: React.ReactNode
   bottom?: BottomProps
-};
+}
 
 export default function Page({ titleText, children, bottom }: PageProps) {
   return (
@@ -24,4 +24,4 @@ export default function Page({ titleText, children, bottom }: PageProps) {
       }
     </>
   );
-};
+}

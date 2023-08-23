@@ -10,7 +10,7 @@ export interface ChecklistGroupProps {
   typeArray: string[],
   checklistArray: ChecklistValue[]
   handleChange: ({ isMe, value, type }: { isMe: boolean, value: number, type: BDSMType }) => void
-};
+}
 
 export default function ChecklistGroup({
   groupName,
@@ -53,4 +53,4 @@ export default function ChecklistGroup({
       </Box>
     </Box>
   );
-};
+}

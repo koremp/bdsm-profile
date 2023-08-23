@@ -31,7 +31,7 @@ export function setupStore(preloadedState?: PreloadedState<RootState>) {
     reducer: rootReducer,
     preloadedState,
   });
-};
+}
 
 const store = setupStore();
 export default store;
