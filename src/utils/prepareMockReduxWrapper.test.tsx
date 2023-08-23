@@ -5,9 +5,11 @@ import { RootState } from 'src/features/store';
 
 function prepareMockReduxWrapper(initialState?: RootState) {
   const store = configureMockStore()(initialState);
-  const wrapper = ({ children }: { children: React.ReactNode }) => {
-    return <Provider store={store as any}>{children}</Provider>;
-  };
+  const wrapper = ({ children }: { children: React.ReactNode }) => (
+    <Provider store={store as any}>
+      {children}
+    </Provider>
+  );
   return [wrapper, store] as const;
 }
 
