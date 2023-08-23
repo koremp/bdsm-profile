@@ -42,8 +42,8 @@ export default function SexualComponent() {
   };
 
   const handleChangeOtherSexualPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const sexualPreference: SexualPreference = (e.target as HTMLInputElement).value;
-    dispatch(setOtherSexualPreference(sexualPreference));
+    const { value } = (e.target as HTMLInputElement);
+    dispatch(setOtherSexualPreference(value));
   };
 
   return (
@@ -69,7 +69,7 @@ export default function SexualComponent() {
               }}
             >
               {
-                sexualPreferenceArray.map(({ text, description }) => (
+                sexualPreferenceArray.map(({ text }) => (
                   <FormControlLabel
                     key={text}
                     value={text}

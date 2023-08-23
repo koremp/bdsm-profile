@@ -1,39 +1,14 @@
 import reducer, {
-
   BDSMChecklistState,
   initialState as bdsmChecklistState,
   setChecklist,
-  ChecklistValue,
-  ChecklistAction,
   ChecklistActionT,
-  spliceChecklist,
 } from 'src/features/bdsmChecklistSlice';
 
 import {
   BDSMChecklist,
-  BDSMType,
-
   Erogenous,
-  Worship,
-  Soft,
-  Mental,
-  Physical,
-  Dirty,
-  Tool,
-  Bondage,
-  Wax,
-  Spanking,
-  Roleplay,
-  Film,
-  Outdoor,
-  Multiplay,
-  NonPenetration,
-  SexualPosition,
-  Oral,
-  Anal,
 } from 'src/types/bdsm/BDSMChecklist';
-
-import { erogenousArray } from 'src/types/bdsm/Erogenous';
 
 const defaultState: BDSMChecklistState = { ...bdsmChecklistState };
 

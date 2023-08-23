@@ -1,4 +1,4 @@
-import { ButtonGroup, Typography } from '@mui/material';
+import { ButtonGroup } from '@mui/material';
 import { deepPurple } from '@mui/material/colors';
 
 import LinkButton, { LinkButtonProps } from 'src/components/LinkButton';

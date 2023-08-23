@@ -1,6 +1,5 @@
 import { Provider } from 'react-redux';
 
-import { supabase } from 'lib/initSupabase';
 import { SessionContextProvider } from '@supabase/auth-helpers-react';
 
 import type { AppProps } from 'next/app';
@@ -15,6 +14,9 @@ import '@fontsource/roboto/700.css';
 import 'styles/global.css';
 
 import { deepPurple } from '@mui/material/colors';
+
+import { supabase } from 'lib/initSupaase';
+
 import store from 'src/features/store';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -30,7 +32,9 @@ export default function App({ Component, pageProps }: AppProps) {
             backgroundColor: `${deepPurple[50]}`,
           }}
         >
-          <Component {...pageProps} />
+          <Component>
+            {...pageProps}
+          </Component>
         </Container>
       </Provider>
     </SessionContextProvider>

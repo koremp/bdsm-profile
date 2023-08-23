@@ -13,7 +13,7 @@ const value: ChecklistValue = {
 test('ChecklistGroup', () => {
   const groupName: string = 'groupname';
   const typeArray = erogenousArray;
-  const checklistArray = erogenousArray.map((_) => value);
+  const checklistArray = erogenousArray.map(() => value);
   const handleChange = jest.fn();
 
   render(

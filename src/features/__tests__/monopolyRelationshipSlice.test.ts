@@ -1,7 +1,6 @@
 import reducer, {
   initialState,
   toggleExistMonopolyRelationship,
-  MonopolyRelationshipState,
   setMonopolyRelationship,
   setOtherMonopolyRelationship,
   setDescription,
@@ -17,7 +16,8 @@ describe('monopolyRelationshipSlice', () => {
 
   describe('toggleExistGender', () => {
     it('toggles exist.', () => {
-      expect(reducer({ ...initialState }, toggleExistMonopolyRelationship()).exist).toEqual(!{ ...initialState }.exist);
+      expect(reducer({ ...initialState }, toggleExistMonopolyRelationship()).exist)
+        .toEqual(!{ ...initialState }.exist);
     });
   });
 
@@ -31,7 +31,8 @@ describe('monopolyRelationshipSlice', () => {
   describe('setOtherMonopolyRelationship', () => {
     it('sets other.', () => {
       const other: string = 'asdf';
-      expect(reducer({ ...initialState }, setOtherMonopolyRelationship(other)).other).toEqual(other);
+      expect(reducer({ ...initialState }, setOtherMonopolyRelationship(other)).other)
+        .toEqual(other);
     });
   });
 

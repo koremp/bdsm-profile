@@ -42,8 +42,8 @@ export default function RomanticComponent() {
   };
 
   const handleChangeOtherRomanticPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const romanticPreference: RomanticPreference = (e.target as HTMLInputElement).value;
-    dispatch(setOtherRomanticPreference(romanticPreference));
+    const { value } = (e.target as HTMLInputElement);
+    dispatch(setOtherRomanticPreference(value));
   };
 
   return (
@@ -57,45 +57,46 @@ export default function RomanticComponent() {
         )}
         label="Romantic Preference"
       />
-      <>
-        {
-          isExist && (
-            <>
-              <RadioGroup
-                value={romanticPreference}
-                onChange={handleChange}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                }}
-              >
-                {
-                  romanticPreferenceArray.map(({ text, description }) => (
-                    <FormControlLabel
-                      key={text}
-                      value={text}
-                      control={<Radio />}
-                      label={text}
-                    />
-                  ))
-                }
-              </RadioGroup>
+      {
+        isExist && (
+          <>
+            <RadioGroup
+              value={romanticPreference}
+              onChange={handleChange}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+              }}
+            >
               {
-                romanticPreference === RomanticPreference.Other && (
-                  <Input
-                    value={otherRomanticPreference}
-                    onChange={handleChangeOtherRomanticPreference}
+                romanticPreferenceArray.map(({ text }) => (
+                  <FormControlLabel
+                    key={text}
+                    value={text}
+                    control={<Radio />}
+                    label={text}
                   />
-                )
+                ))
               }
-              <Box>
-                <Typography>Description</Typography>
-                <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
-              </Box>
-            </>
-          )
-        }
-      </>
+            </RadioGroup>
+            {
+              romanticPreference === RomanticPreference.Other && (
+                <Input
+                  value={otherRomanticPreference}
+                  onChange={handleChangeOtherRomanticPreference}
+                />
+              )
+            }
+            <Box>
+              <Typography>Description</Typography>
+              <Input
+                value={desc}
+                onChange={(e) => { dispatch(setDescription(e.target.value)); }}
+              />
+            </Box>
+          </>
+        )
+      }
     </FormControl>
   );
 }

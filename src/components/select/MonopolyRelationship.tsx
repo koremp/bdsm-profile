@@ -38,9 +38,9 @@ export default function MonopolyRelationshipComponent() {
   };
 
   const handleChangeMonopolyRelationship = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const monopolyRelationship: MonopolyRelationship = e.target.value;
+    const { value } = e.target;
 
-    dispatch(setMonopolyRelationship(monopolyRelationship));
+    dispatch(setMonopolyRelationship(value));
   };
 
   return (
@@ -67,7 +67,7 @@ export default function MonopolyRelationshipComponent() {
             }}
           >
             {
-              monopolyRelationshipArray.map(({ text, description }) => (
+              monopolyRelationshipArray.map(({ text }) => (
                 <FormControlLabel
                   key={text}
                   value={text}

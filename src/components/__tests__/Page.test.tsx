@@ -16,7 +16,7 @@ describe('Page', () => {
     it('renders children ReactNode.', () => {
       const testId = 'test-id';
       const children = <div data-testid={testId}>asdfasdf</div>;
-      const { getByTestId } = render(<Page titleText="" children={children} />);
+      const { getByTestId } = render(<Page titleText="">{children}</Page>);
 
       expect(getByTestId(testId)).not.toBeNull();
     });

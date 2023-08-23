@@ -1,7 +1,6 @@
 import reducer, {
   initialState,
   toggleExistRelationshipPreference,
-  RelationshipState,
   setRelationshipPreference,
   setOtherRelationshipPreference,
   setDescription,
@@ -17,7 +16,8 @@ describe('relationshipPreferenceSlice', () => {
 
   describe('toggleExistRelationshipPreference', () => {
     it('toggles exist.', () => {
-      expect(reducer({ ...initialState }, toggleExistRelationshipPreference()).exist).toEqual(!{ ...initialState }.exist);
+      expect(reducer({ ...initialState }, toggleExistRelationshipPreference()).exist)
+        .toEqual(!{ ...initialState }.exist);
     });
   });
 
@@ -31,7 +31,8 @@ describe('relationshipPreferenceSlice', () => {
   describe('setOtherRelationshipPreference', () => {
     it('sets other.', () => {
       const other: string = 'asdf';
-      expect(reducer({ ...initialState }, setOtherRelationshipPreference(other)).other).toEqual(other);
+      expect(reducer({ ...initialState }, setOtherRelationshipPreference(other)).other)
+        .toEqual(other);
     });
   });
 

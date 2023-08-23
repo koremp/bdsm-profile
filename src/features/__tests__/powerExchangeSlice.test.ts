@@ -1,7 +1,6 @@
 import reducer, {
   initialState,
   toggleExistPowerExchange,
-  PowerExchangeState,
   setPowerExchange,
   setOtherPowerExchange,
   setDescription,
@@ -17,7 +16,8 @@ describe('powerExchangeSlice', () => {
 
   describe('toggleExistPowerExchange', () => {
     it('toggles exist.', () => {
-      expect(reducer({ ...initialState }, toggleExistPowerExchange()).exist).toEqual(!{ ...initialState }.exist);
+      expect(reducer({ ...initialState }, toggleExistPowerExchange()).exist)
+        .toEqual(!{ ...initialState }.exist);
     });
   });
 

@@ -38,9 +38,9 @@ export default function RelationshipPreferenceComponent() {
   };
 
   const handleChangeRelationshipPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const relationshipPreference: RelationshipPreference = e.target.value;
+    const { value } = e.target;
 
-    dispatch(setRelationshipPreference(relationshipPreference));
+    dispatch(setRelationshipPreference(value));
   };
 
   return (
@@ -67,7 +67,7 @@ export default function RelationshipPreferenceComponent() {
             }}
           >
             {
-              relationshipPreferenceArray.map(({ text, description }) => (
+              relationshipPreferenceArray.map(({ text }) => (
                 <FormControlLabel
                   key={text}
                   value={text}

@@ -69,7 +69,7 @@ export default function BDSMComponent() {
               }}
             >
               {
-                bdsmArray.map(({ text, description }) => (
+                bdsmArray.map(({ text }) => (
                   <FormControlLabel
                     key={text}
                     value={text}
@@ -83,7 +83,9 @@ export default function BDSMComponent() {
                   <Box>
                     <Input
                       value={input}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+                      onChange={
+                        (e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)
+                      }
                       onKeyDown={(event) => {
                         if (event.key === 'Enter') {
                           event.preventDefault();
@@ -104,7 +106,10 @@ export default function BDSMComponent() {
                 isExist && (
                   <Box>
                     <Typography>Description</Typography>
-                    <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
+                    <Input
+                      value={desc}
+                      onChange={(e) => { dispatch(setDescription(e.target.value)); }}
+                    />
                   </Box>
                 )
               }

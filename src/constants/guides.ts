@@ -1,4 +1,4 @@
-export const ssc: string = `​Safe, Sane and Consensual.
+export const ssc: string = `Safe, Sane and Consensual.
 
 These are some of the bedrock principals of bdsm. Someone not engaged in the BDSM lifestyle may look at BDSM and wonder how "safe, sane, and consensual" enters into the picture as they may see BDSM as unsafe or unhealthy according to misconceptions about the lifestyle
 

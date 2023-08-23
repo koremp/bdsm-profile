@@ -54,7 +54,7 @@ export interface Item {
   checklist: BDSMChecklist
 }
 
-export default function bdsmChecklist() {
+export default function BDSMChecklistComponent() {
   const dispatch = useDispatch();
 
   const erogenous = useSelector(getChecklistErogenous);
@@ -217,7 +217,9 @@ export default function bdsmChecklist() {
             typeArray={typeArray}
             checklistArray={checklistArray}
             handleChange={
-              ({ isMe, value, type }: { isMe: boolean, value: number, type: BDSMType }) => handleChangeChecklist({
+              (
+                { isMe, value, type }: { isMe: boolean, value: number, type: BDSMType },
+              ) => handleChangeChecklist({
                 isMe, value, checklist, type,
               })
             }

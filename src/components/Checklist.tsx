@@ -36,7 +36,7 @@ export default function Checklist({
         row
         aria-labelledby={`${label}-me-group`}
         value={me}
-        onChange={(event, value) => handleChange({ isMe: true, value: parseInt(value) })}
+        onChange={(event, value) => handleChange({ isMe: true, value: parseInt(value, 10) })}
       >
         {
           Array.from({ length: 5 }, (_, i) => i + 1).map((n) => (
@@ -54,7 +54,7 @@ export default function Checklist({
         row
         aria-labelledby={`${label}-you-group`}
         value={you}
-        onChange={(event, value) => handleChange({ isMe: false, value: parseInt(value) })}
+        onChange={(event, value) => handleChange({ isMe: false, value: parseInt(value, 10) })}
       >
         {
           Array.from({ length: 5 }, (_, i) => i + 1).map((n) => (

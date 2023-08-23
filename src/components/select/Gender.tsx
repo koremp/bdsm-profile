@@ -38,8 +38,8 @@ export default function GenderComponent() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const gender: Gender = (e.target as HTMLInputElement).value;
-    dispatch(setGender(gender));
+    const { value } = (e.target as HTMLInputElement);
+    dispatch(setGender(value));
   };
 
   const handleChangeOtherGender = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +69,7 @@ export default function GenderComponent() {
             }}
           >
             {
-              genderArray.map(({ text, description }) => (
+              genderArray.map(({ text }) => (
                 <FormControlLabel
                   key={text}
                   value={text}

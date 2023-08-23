@@ -21,3 +21,7 @@ export default function Input({
     />
   );
 }
+
+Input.defaultProps = {
+  onKeyDown: undefined,
+};

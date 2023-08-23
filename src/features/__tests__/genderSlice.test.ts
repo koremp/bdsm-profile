@@ -1,5 +1,4 @@
 import reducer, {
-  GenderState,
   initialState,
   toggleExistGender,
   setGender,

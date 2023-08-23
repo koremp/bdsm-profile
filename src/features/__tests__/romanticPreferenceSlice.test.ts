@@ -1,6 +1,5 @@
 import reducer, {
   initialState,
-  RomanticPreferenceState,
   toggleExistRomanticPreference,
   setRomanticPreference,
   setOtherRomanticPreference,
@@ -17,7 +16,8 @@ describe('romanticPreferenceSlice', () => {
 
   describe('toggleExistRomanticPreference', () => {
     it('toggles exist.', () => {
-      expect(reducer({ ...initialState }, toggleExistRomanticPreference()).exist).toEqual(!{ ...initialState }.exist);
+      expect(reducer({ ...initialState }, toggleExistRomanticPreference()).exist)
+        .toEqual(!{ ...initialState }.exist);
     });
   });
 

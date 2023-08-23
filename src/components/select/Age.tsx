@@ -1,5 +1,13 @@
 import {
-  Box, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select, SelectChangeEvent, Typography,
+  Box,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Typography,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -52,8 +60,8 @@ export default function Age() {
               onChange={(e: SelectChangeEvent) => dispatch(setAge(e.target.value))}
             >
               {
-                ageArray.map((age) => (
-                  <MenuItem value={age}>{age}</MenuItem>
+                ageArray.map((value) => (
+                  <MenuItem value={value}>{value}</MenuItem>
                 ))
               }
             </Select>

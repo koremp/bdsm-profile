@@ -97,7 +97,7 @@ export default function ResultProfilePage() {
   const existPowerExchange = useSelector(getExistPowerExchange);
   const powerExchange = useSelector(getPowerExchange);
   const otherPowerExchange = useSelector(getOtherPowerExchange);
-  const powerExchangeDesc = useSelector(getPowerExchange);
+  const powerExchangeDesc = useSelector(getPowerExchangeDesc);
 
   return (
     <Page titleText="Selected BDSM Profile Result Page">
@@ -200,7 +200,7 @@ export default function ResultProfilePage() {
                     <Chip label={otherMonopolyRelationship} variant="outlined" />
                   )
                 }
-                <Typography>{relationshipPreferenceDesc}</Typography>
+                <Typography>{monopolyRelationshipDesc}</Typography>
               </>
             )
           }

@@ -38,9 +38,9 @@ export default function PowerExchangeComponent() {
   };
 
   const handleChangePowerExchange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const powerExchange: PowerExchange = e.target.value;
+    const { value } = e.target;
 
-    dispatch(setPowerExchange(powerExchange));
+    dispatch(setPowerExchange(value));
   };
 
   return (
@@ -67,7 +67,7 @@ export default function PowerExchangeComponent() {
             }}
           >
             {
-              powerExchangeArray.map(({ text, description }) => (
+              powerExchangeArray.map(({ text }) => (
                 <FormControlLabel
                   key={text}
                   value={text}

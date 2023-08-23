@@ -3,7 +3,7 @@ import Title from './Title';
 
 export interface PageProps {
   titleText: string
-  children?: React.ReactNode
+  children?: React.ReactNode | undefined
   bottom?: BottomProps
 }
 
@@ -25,3 +25,8 @@ export default function Page({ titleText, children, bottom }: PageProps) {
     </>
   );
 }
+
+Page.defaultProps = {
+  children: undefined,
+  bottom: undefined,
+};

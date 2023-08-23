@@ -1,7 +1,6 @@
 import reducer, {
   initialState,
   toggleExistSexualPreference,
-  SexualPreferenceState,
   setSexualPreference,
   setOtherSexualPreference,
   setDescription,
@@ -17,7 +16,8 @@ describe('sexualPreferenceSlice', () => {
 
   describe('toggleExistSexualPreference', () => {
     it('toggles exist.', () => {
-      expect(reducer({ ...initialState }, toggleExistSexualPreference()).exist).toEqual(!{ ...initialState }.exist);
+      expect(reducer({ ...initialState }, toggleExistSexualPreference()).exist)
+        .toEqual(!{ ...initialState }.exist);
     });
   });
 
