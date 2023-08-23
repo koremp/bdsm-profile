@@ -35,31 +35,31 @@ export default function RelationshipPreferenceComponent() {
 
   const toggleExist = () => {
     dispatch(toggleExistRelationshipPreference());
-  }
+  };
 
   const handleChangeRelationshipPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
     const relationshipPreference: RelationshipPreference = e.target.value;
 
     dispatch(setRelationshipPreference(relationshipPreference));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={exist}
             onClick={() => toggleExist()}
           />
-        }
-        label='Relationship Preference'
+        )}
+        label="Relationship Preference"
       />
       {
         exist && (
           <RadioGroup
-            aria-labelledby='relationship-preference-radio-buttons-group'
+            aria-labelledby="relationship-preference-radio-buttons-group"
             value={relationshipPreference}
-            name='relationship-preference-radio-buttons-group'
+            name="relationship-preference-radio-buttons-group"
             onChange={handleChangeRelationshipPreference}
             sx={{
               display: 'flex',
@@ -86,7 +86,7 @@ export default function RelationshipPreferenceComponent() {
             }
             <Box>
               <Typography>Description</Typography>
-              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
             </Box>
           </RadioGroup>
         )

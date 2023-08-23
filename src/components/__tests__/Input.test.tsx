@@ -2,7 +2,7 @@ import { fireEvent, render } from '@testing-library/react';
 
 import Input from 'src/components/Input';
 
-describe('Inpput ', () => {
+describe('Inpput', () => {
   it('renders value.', () => {
     const value: string = 'input value';
     const handleChange = jest.fn();
@@ -11,7 +11,7 @@ describe('Inpput ', () => {
       <Input
         value={value}
         onChange={handleChange}
-      />
+      />,
     );
 
     expect(getByRole('textbox')).toHaveProperty('value', value);
@@ -28,14 +28,14 @@ describe('Inpput ', () => {
         <Input
           value={value}
           onChange={handleChange}
-        />
+        />,
       );
 
       expect(getByRole('textbox')).toHaveProperty('value', value);
 
       fireEvent.change(getByRole('textbox'), { target: { value: newValue } });
 
-      expect(handleChange).toBeCalled();
+      expect(handleChange).toHaveBeenCalled();
     });
   });
 
@@ -46,10 +46,10 @@ describe('Inpput ', () => {
 
       const { getByRole } = render(
         <Input
-          value='asdf'
+          value="asdf"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-        />
+        />,
       );
 
       fireEvent.keyDown(getByRole('textbox'), {
@@ -58,7 +58,7 @@ describe('Inpput ', () => {
         charCode: 13,
       });
 
-      expect(handleKeyDown).toBeCalled();
+      expect(handleKeyDown).toHaveBeenCalled();
     });
   });
 });

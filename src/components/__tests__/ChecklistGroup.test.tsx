@@ -10,10 +10,10 @@ const value: ChecklistValue = {
   you: 0,
 };
 
-test('ChecklistGroup ', () => {
+test('ChecklistGroup', () => {
   const groupName: string = 'groupname';
   const typeArray = erogenousArray;
-  const checklistArray = erogenousArray.map(_ => value);
+  const checklistArray = erogenousArray.map((_) => value);
   const handleChange = jest.fn();
 
   render(
@@ -22,6 +22,6 @@ test('ChecklistGroup ', () => {
       typeArray={typeArray}
       checklistArray={checklistArray}
       handleChange={handleChange}
-    />
+    />,
   );
 });

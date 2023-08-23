@@ -4,7 +4,7 @@ import MonopolyRelationshipComponent from 'src/components/select/MonopolyRelatio
 export default function MonopolyRelationshipSelectProfilePage() {
   return (
     <Page
-      titleText='Profile Select - Monopoly Relationship'
+      titleText="Profile Select - Monopoly Relationship"
       bottom={{
         backHref: '/profile/select',
         backName: 'Back',

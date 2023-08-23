@@ -4,7 +4,7 @@ import RomanticPreferenceComponent from 'src/components/select/RomanticPreferenc
 export default function RomanticPreferenceSelectProfilePage() {
   return (
     <Page
-      titleText='Select Profile - Romantic Preference'
+      titleText="Select Profile - Romantic Preference"
       bottom={{
         backHref: '/profile/select',
         backName: 'Back',

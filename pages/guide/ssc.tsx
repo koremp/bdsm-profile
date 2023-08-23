@@ -5,7 +5,7 @@ import { ssc } from 'src/constants/guides';
 export default function SSCGuidePage() {
   return (
     <Page
-      titleText='SSC'
+      titleText="SSC"
       bottom={{
         backHref: '/guide',
         backName: 'Back',

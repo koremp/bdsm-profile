@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
 import { BDSM, BDSMProperty } from 'src/types/BDSM';
+import type { RootState } from './store';
 
 export interface BDSMState extends BDSMProperty { }
 
@@ -10,14 +9,14 @@ export const initialState: BDSMState = {
   values: [],
   others: [],
   desc: '',
-}
+};
 
 export const bdsmSlice = createSlice({
   name: 'bdsm',
   initialState,
   reducers: {
-    toggleExistBDSM: state => {
-      state.exist = !state.exist
+    toggleExistBDSM: (state) => {
+      state.exist = !state.exist;
       if (!state.exist) {
         state.values = [];
         state.others = [];
@@ -58,7 +57,7 @@ export const {
 } = bdsmSlice.actions;
 
 export const getExistBDSM = (state: RootState) => state.bdsm.exist;
-export const getBDSMs = (state: RootState) => state.bdsm.values
+export const getBDSMs = (state: RootState) => state.bdsm.values;
 export const getOtherBDSMs = (state: RootState) => state.bdsm.others;
 export const getDescription = (state: RootState) => state.bdsm.desc;
 

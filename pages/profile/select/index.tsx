@@ -4,7 +4,6 @@ import { deepPurple } from '@mui/material/colors';
 import LinkButton, { LinkButtonProps } from 'src/components/LinkButton';
 import Page from 'src/components/Page';
 
-
 export default function IndexSelectProfilePage() {
   const links: LinkButtonProps[] = [
     { href: '/profile/select/age', name: 'Age' },
@@ -18,13 +17,13 @@ export default function IndexSelectProfilePage() {
   ];
 
   return (
-    <Page titleText='Select Profile'>
+    <Page titleText="Select Profile">
       <ButtonGroup
         fullWidth
-        orientation='vertical'
-        aria-label='profile select button group'
+        orientation="vertical"
+        aria-label="profile select button group"
         sx={{
-          backgroundColor: `${deepPurple[100]}`
+          backgroundColor: `${deepPurple[100]}`,
         }}
       >
         {links.map(({ href, name }) => (
@@ -35,11 +34,11 @@ export default function IndexSelectProfilePage() {
         fullWidth
         sx={{
           mt: 'auto',
-          backgroundColor: `${deepPurple[100]}`
+          backgroundColor: `${deepPurple[100]}`,
         }}
-        aria-label='bottom button group'
+        aria-label="bottom button group"
       >
-        <LinkButton href='/' name='back' />
+        <LinkButton href="/" name="back" />
       </ButtonGroup>
     </Page>
   );

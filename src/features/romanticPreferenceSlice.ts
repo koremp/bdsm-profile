@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
 import { RomanticPreference, RomanticPrefenceProperty } from 'src/types/RomanticPreference';
+import type { RootState } from './store';
 
 export interface RomanticPreferenceState extends RomanticPrefenceProperty { }
 
@@ -10,14 +9,14 @@ export const initialState: RomanticPreferenceState = {
   value: undefined,
   other: '',
   desc: '',
-}
+};
 
 export const romanticPreferenceSlice = createSlice({
   name: 'romanticPreference',
   initialState,
   reducers: {
-    toggleExistRomanticPreference: state => {
-      state.exist = !state.exist
+    toggleExistRomanticPreference: (state) => {
+      state.exist = !state.exist;
       if (!state.exist) {
         state.value = undefined;
         state.other = '';

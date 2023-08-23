@@ -16,7 +16,7 @@ const defaultState: BDSMState = {
 };
 
 describe('bdsmSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual({ ...defaultState });
     });
@@ -45,6 +45,6 @@ describe('bdsmSlice', () => {
     it('set description.', () => {
       const desc: string = 'asdf';
       expect(reducer({ ...defaultState }, setDescription(desc)).desc).toEqual(desc);
-    })
-  })
+    });
+  });
 });

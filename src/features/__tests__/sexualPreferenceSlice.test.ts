@@ -9,7 +9,7 @@ import reducer, {
 import { SexualPreference } from '../../types/SexualPreference';
 
 describe('sexualPreferenceSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual({ ...initialState });
     });
@@ -31,7 +31,7 @@ describe('sexualPreferenceSlice', () => {
   describe('setOtherSexualPreference', () => {
     it('sets other.', () => {
       const other: string = 'asdf';
-      expect(reducer({ ...initialState }, setOtherSexualPreference(other)).other).toEqual(other)
+      expect(reducer({ ...initialState }, setOtherSexualPreference(other)).other).toEqual(other);
     });
   });
 

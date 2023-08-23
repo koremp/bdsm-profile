@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
 import { PowerExchange, PowerExchangeProperty } from 'src/types/PowerExchange';
+import type { RootState } from './store';
 
 export interface PowerExchangeState extends PowerExchangeProperty { }
 
@@ -10,14 +9,14 @@ export const initialState: PowerExchangeState = {
   value: undefined,
   other: '',
   desc: '',
-}
+};
 
 export const powerExchangeSlice = createSlice({
   name: 'PowerExchange',
   initialState,
   reducers: {
-    toggleExistPowerExchange: state => {
-      state.exist = !state.exist
+    toggleExistPowerExchange: (state) => {
+      state.exist = !state.exist;
       if (!state.exist) {
         state.value = undefined;
         state.other = '';

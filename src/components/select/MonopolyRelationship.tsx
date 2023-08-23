@@ -35,31 +35,31 @@ export default function MonopolyRelationshipComponent() {
 
   const toggleExist = () => {
     dispatch(toggleExistMonopolyRelationship());
-  }
+  };
 
   const handleChangeMonopolyRelationship = (e: React.ChangeEvent<HTMLInputElement>) => {
     const monopolyRelationship: MonopolyRelationship = e.target.value;
 
     dispatch(setMonopolyRelationship(monopolyRelationship));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={exist}
             onClick={() => toggleExist()}
           />
-        }
-        label='Monopoly Relationship'
+        )}
+        label="Monopoly Relationship"
       />
       {
         exist && (
           <RadioGroup
-            aria-labelledby='monopoly-relationship-radio-buttons-group'
+            aria-labelledby="monopoly-relationship-radio-buttons-group"
             value={monopolyRelationship}
-            name='monopoly-relationship-radio-buttons-group'
+            name="monopoly-relationship-radio-buttons-group"
             onChange={handleChangeMonopolyRelationship}
             sx={{
               display: 'flex',
@@ -86,7 +86,7 @@ export default function MonopolyRelationshipComponent() {
             }
             <Box>
               <Typography>Description</Typography>
-              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
             </Box>
           </RadioGroup>
         )

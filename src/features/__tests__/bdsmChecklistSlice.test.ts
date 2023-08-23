@@ -1,13 +1,5 @@
-import {
-
-} from 'src/features/bdsmChecklistSlice';
-
-import {
-  BDSMChecklist,
-  BDSMType,
-} from 'src/types/bdsm/BDSMChecklist';
-
 import reducer, {
+
   BDSMChecklistState,
   initialState as bdsmChecklistState,
   setChecklist,
@@ -18,6 +10,9 @@ import reducer, {
 } from 'src/features/bdsmChecklistSlice';
 
 import {
+  BDSMChecklist,
+  BDSMType,
+
   Erogenous,
   Worship,
   Soft,
@@ -37,12 +32,13 @@ import {
   Oral,
   Anal,
 } from 'src/types/bdsm/BDSMChecklist';
+
 import { erogenousArray } from 'src/types/bdsm/Erogenous';
 
 const defaultState: BDSMChecklistState = { ...bdsmChecklistState };
 
 describe('bdsmChecklistSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       const state = reducer(undefined, { type: 'action' });
 

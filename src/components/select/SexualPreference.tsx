@@ -35,27 +35,27 @@ export default function SexualComponent() {
 
   const handleClickSexualPreference = () => {
     dispatch(toggleExistSexualPreference());
-  }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setSexualPreference((e.target as HTMLInputElement).value));
-  }
+  };
 
   const handleChangeOtherSexualPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
     const sexualPreference: SexualPreference = (e.target as HTMLInputElement).value;
     dispatch(setOtherSexualPreference(sexualPreference));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={isExist}
             onClick={() => handleClickSexualPreference()}
           />
-        }
-        label={"SexualPreference"}
+        )}
+        label="SexualPreference"
       />
       {
         isExist && (
@@ -89,7 +89,7 @@ export default function SexualComponent() {
             }
             <Box>
               <Typography>Description</Typography>
-              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
             </Box>
           </>
         )

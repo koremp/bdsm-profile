@@ -4,7 +4,7 @@ import SexualPreferenceComponent from 'src/components/select/SexualPreference';
 export default function SexualPreferenceSelectProfilePage() {
   return (
     <Page
-      titleText='Profile Select - Sexual Preference'
+      titleText="Profile Select - Sexual Preference"
       bottom={{
         backHref: '/profile/select',
         backName: 'Back',

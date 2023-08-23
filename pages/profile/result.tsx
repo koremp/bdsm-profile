@@ -1,11 +1,10 @@
 import { useSelector } from 'react-redux';
-import Page from 'src/components/Page';
-
 import {
   Box,
   Chip,
   Typography,
 } from '@mui/material';
+import Page from 'src/components/Page';
 
 import {
   getExistBDSM,
@@ -101,7 +100,7 @@ export default function ResultProfilePage() {
   const powerExchangeDesc = useSelector(getPowerExchange);
 
   return (
-    <Page titleText='Selected BDSM Profile Result Page'>
+    <Page titleText="Selected BDSM Profile Result Page">
       <Box>
         <Typography>
           Gender
@@ -112,9 +111,9 @@ export default function ResultProfilePage() {
               <>
                 {
                   gender !== Gender.Other ? (
-                    <Chip label={gender} variant='outlined' />
+                    <Chip label={gender} variant="outlined" />
                   ) : (
-                    <Chip label={otherGender} variant='outlined' />
+                    <Chip label={otherGender} variant="outlined" />
                   )
                 }
                 <Typography>{genderDesc}</Typography>
@@ -133,9 +132,9 @@ export default function ResultProfilePage() {
               <>
                 {
                   romanticPreference !== RomanticPreference.Other ? (
-                    <Chip label={romanticPreference} variant='outlined' />
+                    <Chip label={romanticPreference} variant="outlined" />
                   ) : (
-                    <Chip label={otherRomanticPreference} variant='outlined' />
+                    <Chip label={otherRomanticPreference} variant="outlined" />
                   )
                 }
                 <Typography>{romanticPreferenceDesc}</Typography>
@@ -154,9 +153,9 @@ export default function ResultProfilePage() {
               <>
                 {
                   sexualPreference !== SexualPreference.Other ? (
-                    <Chip label={sexualPreference} variant='outlined' />
+                    <Chip label={sexualPreference} variant="outlined" />
                   ) : (
-                    <Chip label={otherSexualPreference} variant='outlined' />
+                    <Chip label={otherSexualPreference} variant="outlined" />
                   )
                 }
                 <Typography>{sexualPreferenceDesc}</Typography>
@@ -175,9 +174,9 @@ export default function ResultProfilePage() {
               <>
                 {
                   relationshipPreference !== RelationshipPreference.Other ? (
-                    <Chip label={relationshipPreference} variant='outlined' />
+                    <Chip label={relationshipPreference} variant="outlined" />
                   ) : (
-                    <Chip label={otherRelationshipPreference} variant='outlined' />
+                    <Chip label={otherRelationshipPreference} variant="outlined" />
                   )
                 }
                 <Typography>{relationshipPreferenceDesc}</Typography>
@@ -196,9 +195,9 @@ export default function ResultProfilePage() {
               <>
                 {
                   monopolyRelationship !== MonopolyRelationship.Other ? (
-                    <Chip label={monopolyRelationship} variant='outlined' />
+                    <Chip label={monopolyRelationship} variant="outlined" />
                   ) : (
-                    <Chip label={otherMonopolyRelationship} variant='outlined' />
+                    <Chip label={otherMonopolyRelationship} variant="outlined" />
                   )
                 }
                 <Typography>{relationshipPreferenceDesc}</Typography>
@@ -217,13 +216,13 @@ export default function ResultProfilePage() {
               <>
                 {
                   BDSMs.map((bdsm) => (
-                    <Chip label={bdsm} variant='outlined' />
+                    <Chip label={bdsm} variant="outlined" />
                   ))
                 }
                 {
                   BDSMs.includes(BDSM.Other) && (
                     otherBDSMs.map((other) => (
-                      <Chip label={other} variant='outlined' />
+                      <Chip label={other} variant="outlined" />
                     ))
                   )
                 }
@@ -243,9 +242,9 @@ export default function ResultProfilePage() {
               <>
                 {
                   powerExchange !== PowerExchange.Other ? (
-                    <Chip label={powerExchange} variant='outlined' />
+                    <Chip label={powerExchange} variant="outlined" />
                   ) : (
-                    <Chip label={otherPowerExchange} variant='outlined' />
+                    <Chip label={otherPowerExchange} variant="outlined" />
                   )
                 }
                 <Typography>{powerExchangeDesc}</Typography>

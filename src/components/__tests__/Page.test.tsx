@@ -4,7 +4,7 @@ import Page from 'src/components/Page';
 
 import { BottomProps } from 'src/components/Bottom';
 
-describe('Page ', () => {
+describe('Page', () => {
   it('renders titleText.', () => {
     const titleText: string = 'asdfasdfasdfasdf';
     const { getByText } = render(<Page titleText={titleText} />);
@@ -16,7 +16,7 @@ describe('Page ', () => {
     it('renders children ReactNode.', () => {
       const testId = 'test-id';
       const children = <div data-testid={testId}>asdfasdf</div>;
-      const { getByTestId } = render(<Page titleText='' children={children} />)
+      const { getByTestId } = render(<Page titleText="" children={children} />);
 
       expect(getByTestId(testId)).not.toBeNull();
     });
@@ -31,7 +31,7 @@ describe('Page ', () => {
         nextName: 'nextName',
       };
 
-      const { getByText } = render(<Page titleText='' bottom={bottomProps} />)
+      const { getByText } = render(<Page titleText="" bottom={bottomProps} />);
 
       expect(getByText(bottomProps.backName)).not.toBeNull();
       expect(getByText(bottomProps.nextName)).not.toBeNull();

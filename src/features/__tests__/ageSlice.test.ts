@@ -1,10 +1,9 @@
-import {
+import reducer, {
   toggleExistAge,
   setAge,
   setDescription,
+  AgeState,
 } from 'src/features/ageSlice';
-
-import reducer, { AgeState } from 'src/features/ageSlice';
 
 const defaultState: AgeState = {
   exist: false,
@@ -14,7 +13,7 @@ const defaultState: AgeState = {
 };
 
 describe('ageSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       const state = reducer(undefined, { type: 'action' });
 

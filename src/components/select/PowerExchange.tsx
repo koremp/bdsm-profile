@@ -35,31 +35,31 @@ export default function PowerExchangeComponent() {
 
   const toggleExist = () => {
     dispatch(toggleExistPowerExchange());
-  }
+  };
 
   const handleChangePowerExchange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const powerExchange: PowerExchange = e.target.value;
 
     dispatch(setPowerExchange(powerExchange));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={exist}
             onClick={() => toggleExist()}
           />
-        }
-        label='PowerExchange'
+        )}
+        label="PowerExchange"
       />
       {
         exist && (
           <RadioGroup
-            aria-labelledby='power-exchange-radio-buttons-group'
+            aria-labelledby="power-exchange-radio-buttons-group"
             value={powerExchange}
-            name='power-exchange-radio-buttons-group'
+            name="power-exchange-radio-buttons-group"
             onChange={handleChangePowerExchange}
             sx={{
               display: 'flex',
@@ -86,7 +86,7 @@ export default function PowerExchangeComponent() {
             }
             <Box>
               <Typography>Description</Typography>
-              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+              <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
             </Box>
           </RadioGroup>
         )

@@ -9,7 +9,7 @@ import reducer, {
 import { PowerExchange } from 'src/types/PowerExchange';
 
 describe('powerExchangeSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual({ ...initialState });
     });
@@ -31,7 +31,7 @@ describe('powerExchangeSlice', () => {
   describe('setOtherPowerExchange', () => {
     it('sets other.', () => {
       const other: string = 'asdf';
-      expect(reducer({ ...initialState }, setOtherPowerExchange(other)).other).toEqual(other)
+      expect(reducer({ ...initialState }, setOtherPowerExchange(other)).other).toEqual(other);
     });
   });
 

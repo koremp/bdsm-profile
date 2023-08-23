@@ -18,12 +18,12 @@ export default function Bottom({
 }: BottomProps) {
   return (
     <ButtonGroup
-      variant='outlined'
-      aria-label='bottom button group'
+      variant="outlined"
+      aria-label="bottom button group"
       fullWidth
       sx={{
         mt: 'auto',
-        backgroundColor: `${deepPurple[100]}`
+        backgroundColor: `${deepPurple[100]}`,
       }}
     >
       <LinkButton href={backHref} name={backName} />

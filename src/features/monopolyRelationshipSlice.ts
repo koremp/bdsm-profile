@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
 import { MonopolyRelationship, MonopolyRelationshipProperty } from 'src/types/MonopolyRelationship';
+import type { RootState } from './store';
 
 // Define a type for the slice state
 // Define the initial state using that type
@@ -13,14 +12,14 @@ export const initialState: MonopolyRelationshipState = {
   value: undefined,
   other: '',
   desc: '',
-}
+};
 
 export const monopolyRelationshipSlice = createSlice({
   name: 'monopolyRelatinship',
   initialState,
   reducers: {
-    toggleExistMonopolyRelationship: state => {
-      state.exist = !state.exist
+    toggleExistMonopolyRelationship: (state) => {
+      state.exist = !state.exist;
       if (!state.exist) {
         state.value = undefined;
         state.other = '';
@@ -36,7 +35,7 @@ export const monopolyRelationshipSlice = createSlice({
     setDescription: (state, action: PayloadAction<string>) => {
       state.desc = action.payload;
     },
-  }
+  },
 });
 
 export const {

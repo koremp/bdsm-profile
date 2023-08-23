@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
 import { SingleProps } from 'src/types/Props';
+import type { RootState } from './store';
 
 export interface AgeState extends SingleProps<string> { }
 
@@ -9,15 +8,15 @@ const initialState: AgeState = {
   exist: false,
   value: undefined,
   other: '',
-  desc: ''
+  desc: '',
 };
 
 export const ageSlice = createSlice({
   name: 'age',
   initialState,
   reducers: {
-    toggleExistAge: state => {
-      state.exist = !state.exist
+    toggleExistAge: (state) => {
+      state.exist = !state.exist;
       if (!state.exist) {
         state.value = undefined;
         state.other = '';

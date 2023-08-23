@@ -82,20 +82,20 @@ export {
 };
 
 export type BDSMType = Erogenous
-  | Worship
-  | Soft
-  | Mental
-  | Physical
-  | Dirty
-  | Tool
-  | Bondage
-  | Wax
-  | Spanking
-  | Roleplay
-  | Film
-  | Outdoor
-  | Multiplay
-  | NonPenetration
-  | SexualPosition
-  | Oral
-  | Anal;
+| Worship
+| Soft
+| Mental
+| Physical
+| Dirty
+| Tool
+| Bondage
+| Wax
+| Spanking
+| Roleplay
+| Film
+| Outdoor
+| Multiplay
+| NonPenetration
+| SexualPosition
+| Oral
+| Anal;

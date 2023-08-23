@@ -7,10 +7,11 @@ export interface TitleProps {
 export default function Title({ text }: TitleProps) {
   return (
     <Typography
-      variant='h3'
+      variant="h3"
       sx={{
         textAlign: 'center',
-      }}>
+      }}
+    >
       {text}
     </Typography>
   );

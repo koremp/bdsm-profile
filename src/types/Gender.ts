@@ -3,16 +3,16 @@ import { Information, convertInformation2Obj } from './Information';
 
 export const genderArray: readonly Information[] = [
   {
-    text: "Female",
-    description: "A person who identifies as female, typically assigned female at birth."
+    text: 'Female',
+    description: 'A person who identifies as female, typically assigned female at birth.',
   },
   {
     text: 'Male',
-    description: "A person who identifies as male, typically assigned male at birth."
+    description: 'A person who identifies as male, typically assigned male at birth.',
   },
   {
     text: 'Non-binary',
-    description: "Non-binary individuals do not exclusively identify as male or female.They may identify outside of or beyond the traditional binary gender system.",
+    description: 'Non-binary individuals do not exclusively identify as male or female.They may identify outside of or beyond the traditional binary gender system.',
   },
   {
     text: 'Genderqueer',
@@ -40,23 +40,23 @@ export const genderArray: readonly Information[] = [
   },
   {
     text: 'Gender Nonconforming',
-    description: "Gender nonconforming individuals express themselves in ways that defy societal expectations or norms associated with their assigned gender at birth.",
+    description: 'Gender nonconforming individuals express themselves in ways that defy societal expectations or norms associated with their assigned gender at birth.',
   },
   {
-    text: "Other",
+    text: 'Other',
     description: '',
   },
   {
-    text: "Transgender",
+    text: 'Transgender',
     description: 'Transgender individuals have a gender identity that does not align with the sex they were assigned at birth. They may transition socially, medically, or legally to live in alignment with their true gender identity.',
   },
   {
-    text: "Demigender",
+    text: 'Demigender',
     description: 'Demigender individuals have a partial connection or identification with a particular gender. For example, someone may identify as demigirl, meaning they partially identify as a girl while also having another gender identity.',
   },
   {
-    text: "Neutrois",
-    description: "Neutrois individuals have a gender identity that is neutral or null, experiencing little or no connection to gender.",
+    text: 'Neutrois',
+    description: 'Neutrois individuals have a gender identity that is neutral or null, experiencing little or no connection to gender.',
   },
   {
     text: 'Pangender',

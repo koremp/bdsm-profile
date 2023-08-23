@@ -9,7 +9,7 @@ import reducer, {
 import { MonopolyRelationship } from 'src/types/MonopolyRelationship';
 
 describe('monopolyRelationshipSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual({ ...initialState });
     });
@@ -31,7 +31,7 @@ describe('monopolyRelationshipSlice', () => {
   describe('setOtherMonopolyRelationship', () => {
     it('sets other.', () => {
       const other: string = 'asdf';
-      expect(reducer({ ...initialState }, setOtherMonopolyRelationship(other)).other).toEqual(other)
+      expect(reducer({ ...initialState }, setOtherMonopolyRelationship(other)).other).toEqual(other);
     });
   });
 

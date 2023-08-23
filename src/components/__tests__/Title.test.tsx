@@ -8,5 +8,5 @@ describe('Title', () => {
     const { getByText } = render(<Title text={text} />);
 
     expect(getByText(text)).not.toBeNull();
-  })
+  });
 });

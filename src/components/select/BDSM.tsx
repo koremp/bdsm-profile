@@ -39,24 +39,24 @@ export default function BDSMComponent() {
 
   const handleToggleBDSM = () => {
     dispatch(toggleExistBDSM());
-  }
+  };
 
   const handleChangeBDSM = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text: BDSM = e.target.value;
 
     dispatch(setBDSMs(text));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={isExist}
             onClick={() => handleToggleBDSM()}
           />
-        }
-        label='BDSM'
+        )}
+        label="BDSM"
       />
       {
         isExist && (
@@ -104,7 +104,7 @@ export default function BDSMComponent() {
                 isExist && (
                   <Box>
                     <Typography>Description</Typography>
-                    <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+                    <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
                   </Box>
                 )
               }
@@ -112,6 +112,6 @@ export default function BDSMComponent() {
           </Box>
         )
       }
-    </FormControl >
+    </FormControl>
   );
 }

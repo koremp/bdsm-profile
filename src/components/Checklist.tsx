@@ -24,36 +24,45 @@ export default function Checklist({
 }: ChecklistProps) {
   return (
     <FormControl sx={{
-      p: 2
-    }}>
-      <FormLabel>{label} - Me</FormLabel>
+      p: 2,
+    }}
+    >
+      <FormLabel>
+        {label}
+        {' '}
+        - Me
+      </FormLabel>
       <RadioGroup
         row
-        aria-labelledby={label + '-me-group'}
+        aria-labelledby={`${label}-me-group`}
         value={me}
         onChange={(event, value) => handleChange({ isMe: true, value: parseInt(value) })}
       >
         {
           Array.from({ length: 5 }, (_, i) => i + 1).map((n) => (
-            <FormControlLabel key={`label - ` + n} value={n} control={<Radio />} label={n} />
+            <FormControlLabel key={`label - ${n}`} value={n} control={<Radio />} label={n} />
           ))
         }
         <Button onClick={() => handleChange({ isMe: true, value: 0 })}>Remove</Button>
       </RadioGroup>
-      <FormLabel>{label} - You</FormLabel>
+      <FormLabel>
+        {label}
+        {' '}
+        - You
+      </FormLabel>
       <RadioGroup
         row
-        aria-labelledby={label + '-you-group'}
+        aria-labelledby={`${label}-you-group`}
         value={you}
         onChange={(event, value) => handleChange({ isMe: false, value: parseInt(value) })}
       >
         {
           Array.from({ length: 5 }, (_, i) => i + 1).map((n) => (
-            <FormControlLabel key={`label - ` + n} value={n} control={<Radio />} label={n} />
+            <FormControlLabel key={`label - ${n}`} value={n} control={<Radio />} label={n} />
           ))
         }
         <Button onClick={() => handleChange({ isMe: false, value: 0 })}>Remove</Button>
-      </RadioGroup >
-    </FormControl >
+      </RadioGroup>
+    </FormControl>
   );
 }

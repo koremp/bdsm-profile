@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import LinkButton from 'src/components/LinkButton';
 
-describe('LinkButton ', () => {
+describe('LinkButton', () => {
   it('renders name.', () => {
     const href: string = 'LinkButton Href';
     const name: string = 'LinkButton Name';
@@ -17,6 +17,6 @@ describe('LinkButton ', () => {
 
     const { getByRole } = render(<LinkButton href={href} name={name} />);
 
-    expect(getByRole('link', { name: name })).toHaveAttribute('href', href);
+    expect(getByRole('link', { name })).toHaveAttribute('href', href);
   });
 });

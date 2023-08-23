@@ -5,7 +5,7 @@ import { prick } from 'src/constants/guides';
 export default function PRICKGuidePage() {
   return (
     <Page
-      titleText='PRICK'
+      titleText="PRICK"
       bottom={{
         backHref: '/guide',
         backName: 'Back',

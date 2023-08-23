@@ -1,4 +1,6 @@
-import { Box, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
+import {
+  Box, Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select, SelectChangeEvent, Typography,
+} from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -30,23 +32,23 @@ export default function Age() {
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={exist}
             onClick={() => dispatch(toggleExistAge())}
           />
-        }
-        label='Age'
+        )}
+        label="Age"
       />
       {
         exist && (
           <>
-            <InputLabel id='age-select-label'>Age</InputLabel>
+            <InputLabel id="age-select-label">Age</InputLabel>
             <Select
-              labelId='age-select-label'
-              id='age-select-id'
+              labelId="age-select-label"
+              id="age-select-id"
               value={age}
-              label='Age'
+              label="Age"
               onChange={(e: SelectChangeEvent) => dispatch(setAge(e.target.value))}
             >
               {

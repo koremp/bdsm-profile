@@ -6,10 +6,10 @@ import reducer, {
   setOtherRelationshipPreference,
   setDescription,
 } from 'src/features/relationshipPreferenceSlice';
-import { RelationshipPreference } from 'src/types/RelationshipPreference'
+import { RelationshipPreference } from 'src/types/RelationshipPreference';
 
 describe('relationshipPreferenceSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual({ ...initialState });
     });
@@ -31,7 +31,7 @@ describe('relationshipPreferenceSlice', () => {
   describe('setOtherRelationshipPreference', () => {
     it('sets other.', () => {
       const other: string = 'asdf';
-      expect(reducer({ ...initialState }, setOtherRelationshipPreference(other)).other).toEqual(other)
+      expect(reducer({ ...initialState }, setOtherRelationshipPreference(other)).other).toEqual(other);
     });
   });
 

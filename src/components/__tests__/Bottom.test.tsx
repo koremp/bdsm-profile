@@ -5,9 +5,10 @@ import Bottom from 'src/components/Bottom';
 test('Bottom', () => {
   render(
     <Bottom
-      backHref='backHref'
-      backName='backName'
-      nextHref='nextHref'
-      nextName='nextName'
-    />);
+      backHref="backHref"
+      backName="backName"
+      nextHref="nextHref"
+      nextName="nextName"
+    />,
+  );
 });

@@ -5,7 +5,7 @@ import { cnc } from 'src/constants/guides';
 export default function CNCGuidePage() {
   return (
     <Page
-      titleText='CNC'
+      titleText="CNC"
       bottom={{
         backHref: '/guide',
         backName: 'Back',

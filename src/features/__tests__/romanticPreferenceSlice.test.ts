@@ -9,7 +9,7 @@ import reducer, {
 import { RomanticPreference } from 'src/types/RomanticPreference';
 
 describe('romanticPreferenceSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual({ ...initialState });
     });

@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-
 import { SexualPreference, SexualPreferenceProperty } from 'src/types/SexualPreference';
+import type { RootState } from './store';
 
 export interface SexualPreferenceState extends SexualPreferenceProperty { }
 
@@ -10,14 +9,14 @@ export const initialState: SexualPreferenceState = {
   value: undefined,
   other: '',
   desc: '',
-}
+};
 
 export const sexualPreferenceSlice = createSlice({
   name: 'sexualPreference',
   initialState,
   reducers: {
-    toggleExistSexualPreference: state => {
-      state.exist = !state.exist
+    toggleExistSexualPreference: (state) => {
+      state.exist = !state.exist;
       if (!state.exist) {
         state.value = undefined;
         state.other = '';

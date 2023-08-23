@@ -5,15 +5,15 @@ import { cccc } from 'src/constants/guides';
 
 export default function CCCCGuidePage() {
   return (
-    <Page titleText='CCCC'>
+    <Page titleText="CCCC">
       <ButtonGroup
         sx={{ mt: 'auto' }}
         fullWidth
-        orientation='vertical'
-        aria-label='bottom button group'
+        orientation="vertical"
+        aria-label="bottom button group"
       >
         <Typography>{cccc}</Typography>
-        <LinkButton href='/guide' name='Back' />
+        <LinkButton href="/guide" name="Back" />
       </ButtonGroup>
     </Page>
   );

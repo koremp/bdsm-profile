@@ -10,7 +10,7 @@ import reducer, {
 import { Gender } from 'src/types/Gender';
 
 describe('genderSlice', () => {
-  describe('when previous state is undefined, ', () => {
+  describe('when previous state is undefined,', () => {
     it('returns initialState.', () => {
       expect(reducer(undefined, { type: 'action' })).toEqual(initialState);
     });

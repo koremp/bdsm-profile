@@ -34,29 +34,29 @@ export default function GenderComponent() {
   const desc = useSelector(getDescription);
 
   const handleClickGender = () => {
-    dispatch(toggleExistGender())
-  }
+    dispatch(toggleExistGender());
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const gender: Gender = (e.target as HTMLInputElement).value;
     dispatch(setGender(gender));
-  }
+  };
 
   const handleChangeOtherGender = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const text = (e.target as HTMLInputElement).value
+    const text = (e.target as HTMLInputElement).value;
     dispatch(setOtherGender(text));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={isExist}
             onClick={() => handleClickGender()}
           />
-        }
-        label={"Gender"}
+        )}
+        label="Gender"
       />
       {
         isExist && (
@@ -93,10 +93,10 @@ export default function GenderComponent() {
         isExist && (
           <Box>
             <Typography>Description</Typography>
-            <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+            <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
           </Box>
         )
       }
     </FormControl>
-  )
+  );
 }

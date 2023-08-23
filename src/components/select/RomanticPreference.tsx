@@ -10,7 +10,6 @@ import {
   Typography,
 } from '@mui/material';
 
-
 import {
   getExistRomanticPreference,
   toggleExistRomanticPreference,
@@ -36,27 +35,27 @@ export default function RomanticComponent() {
 
   const handleClickRomanticPreference = () => {
     dispatch(toggleExistRomanticPreference());
-  }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setRomanticPreference((e.target as HTMLInputElement).value));
-  }
+  };
 
   const handleChangeOtherRomanticPreference = (e: React.ChangeEvent<HTMLInputElement>) => {
     const romanticPreference: RomanticPreference = (e.target as HTMLInputElement).value;
     dispatch(setOtherRomanticPreference(romanticPreference));
-  }
+  };
 
   return (
     <FormControl>
       <FormControlLabel
-        control={
+        control={(
           <Checkbox
             checked={isExist}
             onClick={() => handleClickRomanticPreference()}
           />
-        }
-        label={"Romantic Preference"}
+        )}
+        label="Romantic Preference"
       />
       <>
         {
@@ -91,7 +90,7 @@ export default function RomanticComponent() {
               }
               <Box>
                 <Typography>Description</Typography>
-                <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)) }} />
+                <Input value={desc} onChange={(e) => { dispatch(setDescription(e.target.value)); }} />
               </Box>
             </>
           )

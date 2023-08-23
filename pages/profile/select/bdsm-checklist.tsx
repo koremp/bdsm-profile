@@ -54,7 +54,6 @@ export interface Item {
   checklist: BDSMChecklist
 }
 
-
 export default function bdsmChecklist() {
   const dispatch = useDispatch();
 
@@ -77,8 +76,12 @@ export default function bdsmChecklist() {
   const oral = useSelector(getChecklistOral);
   const anal = useSelector(getChecklistAnal);
 
-  const handleChangeChecklist = ({ isMe, value, checklist, type }: { isMe: boolean, value: number, checklist: BDSMChecklist, type: BDSMType }) => {
-    dispatch(setChecklist({ isMe, value, checklist, type }));
+  const handleChangeChecklist = ({
+    isMe, value, checklist, type,
+  }: { isMe: boolean, value: number, checklist: BDSMChecklist, type: BDSMType }) => {
+    dispatch(setChecklist({
+      isMe, value, checklist, type,
+    }));
   };
 
   const bdsmChecklistArray: Item[] = [
@@ -194,7 +197,7 @@ export default function bdsmChecklist() {
 
   return (
     <Page
-      titleText='Profile Select - BDSM Checklist'
+      titleText="Profile Select - BDSM Checklist"
       bottom={{
         backHref: '/profile/select',
         backName: 'Back',
@@ -208,17 +211,18 @@ export default function bdsmChecklist() {
           typeArray,
           checklistArray,
           checklist,
-        }) =>
+        }) => (
           <ChecklistGroup
             groupName={groupName}
             typeArray={typeArray}
             checklistArray={checklistArray}
             handleChange={
-              ({ isMe, value, type }: { isMe: boolean, value: number, type: BDSMType }) =>
-                handleChangeChecklist({ isMe, value, checklist, type })
+              ({ isMe, value, type }: { isMe: boolean, value: number, type: BDSMType }) => handleChangeChecklist({
+                isMe, value, checklist, type,
+              })
             }
           />
-        )
+        ))
       }
     </Page>
   );
