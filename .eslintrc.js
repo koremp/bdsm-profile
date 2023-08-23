@@ -4,12 +4,20 @@ module.exports = {
     "eslint:recommended",
     "next"
   ],
+  "plugins": [
+    "testing-library",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
   "overrides": [
     {
       "files": [
         "**/__tests__/**/*.[jt]s?(x)"
       ],
-      "env": { "jest/globals": true },
+      "env": {
+        "jest": true,
+        "jest/globals": true,
+      },
       "globals": {
         "context": "readonly"
       },
