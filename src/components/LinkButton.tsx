@@ -9,7 +9,10 @@ export interface LinkButtonProps {
 export default function LinkButton({ href, name }: LinkButtonProps) {
   return (
     <Button>
-      <Link href={href}>
+      <Link href={{
+        pathname: href,
+      }}
+      >
         {name}
       </Link>
     </Button>
