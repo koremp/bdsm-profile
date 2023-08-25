@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import CCCCGuidePage from 'pages/guide/cccc';
+import CCCCGuidePage from 'app/guide/cccc';
 
 test('CCCC Guide', () => {
   render(<CCCCGuidePage />);
