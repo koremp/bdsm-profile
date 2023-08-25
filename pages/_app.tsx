@@ -15,9 +15,9 @@ import 'styles/global.css';
 
 import { deepPurple } from '@mui/material/colors';
 
-import { supabase } from 'lib/initSupaase';
-
 import store from 'src/features/store';
+
+import supabase from '../lib/initSupabase';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
