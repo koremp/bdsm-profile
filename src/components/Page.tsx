@@ -15,10 +15,9 @@ export default function Page({ titleText, children, bottom }: PageProps) {
       {
         bottom && (
           <Bottom
-            backHref={bottom.backHref}
-            backName={bottom.backName}
-            nextHref={bottom.nextHref}
-            nextName={bottom.nextName}
+            back={bottom.back}
+            middle={bottom.middle}
+            next={bottom.next}
           />
         )
       }
