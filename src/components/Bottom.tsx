@@ -9,7 +9,7 @@ export interface ButtonProps {
 }
 export interface BottomProps {
   back: ButtonProps
-  middle?: ButtonProps
+  middle: ButtonProps | undefined
   next: ButtonProps
 }
 
