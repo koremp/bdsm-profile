@@ -3,18 +3,20 @@ import { deepPurple } from '@mui/material/colors';
 
 import LinkButton from './LinkButton';
 
+export interface ButtonProps {
+  href: string
+  name: string
+}
 export interface BottomProps {
-  backHref: string
-  backName: string
-  nextHref: string
-  nextName: string
+  back: ButtonProps
+  middle?: ButtonProps
+  next: ButtonProps
 }
 
 export default function Bottom({
-  backHref,
-  backName,
-  nextHref,
-  nextName,
+  back,
+  middle,
+  next,
 }: BottomProps) {
   return (
     <ButtonGroup
@@ -26,8 +28,13 @@ export default function Bottom({
         backgroundColor: `${deepPurple[100]}`,
       }}
     >
-      <LinkButton href={backHref} name={backName} />
-      <LinkButton href={nextHref} name={nextName} />
+      <LinkButton href={back.href} name={back.name} />
+      {
+        middle && (
+          <LinkButton href={middle.href} name={middle.name} />
+        )
+      }
+      <LinkButton href={next.href} name={next.name} />
     </ButtonGroup>
   );
 }
