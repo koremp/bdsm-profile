@@ -9,7 +9,7 @@ import 'styles/global.css';
 
 import { deepPurple } from '@mui/material/colors';
 
-import Providers from 'src/components/Providers';
+import Providers from 'src/features/Providers';
 
 export default function RootLayout({
   children,
