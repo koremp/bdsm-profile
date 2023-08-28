@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { erogenousArray } from 'src/types/bdsm/Erogenous';
@@ -44,7 +46,7 @@ import {
   ChecklistValue,
 } from 'src/features/bdsmChecklistSlice';
 
-import ChecklistGroup from 'src/components/ChecklistGroup';
+import ChecklistGroup, { TutorialChecklistGroup } from 'src/components/ChecklistGroup';
 import Page from 'src/components/Page';
 
 import { BDSMChecklist, BDSMType } from 'src/types/bdsm/BDSMChecklist';
@@ -85,6 +87,29 @@ export default function BDSMChecklistPage() {
       isMe, value, checklist, type,
     }));
   };
+
+  const isBrowser = () => typeof window !== 'undefined'; // The approach recommended by Next.js
+
+  function scrollToTop() {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const [checklistIdx, setChecklistIdx] = React.useState<number>(-1);
+
+  const handleChangeChecklistIdx = ({ isForward }: { isForward: boolean }) => {
+    if (isForward) {
+      setChecklistIdx(checklistIdx + 1);
+    } else {
+      setChecklistIdx(checklistIdx - 1);
+    }
+
+    scrollToTop();
+  };
+
+  React.useEffect(() => {
+
+  }, [checklistIdx]);
 
   const bdsmChecklistArray: Item[] = [
     {
@@ -202,8 +227,8 @@ export default function BDSMChecklistPage() {
       titleText="Profile Select - BDSM Checklist"
       bottom={{
         back: {
-          href: '/profile/',
-          name: '/profile/',
+          href: '/profile/select/power-exchange',
+          name: 'Power Exchange',
         },
         middle: {
           href: '/profile/select',
@@ -216,25 +241,37 @@ export default function BDSMChecklistPage() {
       }}
     >
       {
+        (checklistIdx === -1) && (
+          <TutorialChecklistGroup
+            handleChangeChecklistIdx={() => handleChangeChecklistIdx({ isForward: true })}
+          />
+        )
+      }
+      {
         bdsmChecklistArray.map(({
           groupName,
           typeArray,
           checklistArray,
           checklist,
-        }) => (
-          <ChecklistGroup
-            key={checklistArray.toString()}
-            groupName={groupName}
-            typeArray={typeArray}
-            checklistArray={checklistArray}
-            handleChange={
-              (
-                { isMe, value, type }: { isMe: boolean, value: number, type: BDSMType },
-              ) => handleChangeChecklist({
-                isMe, value, checklist, type,
-              })
-            }
-          />
+        }, index) => (
+          (index === checklistIdx) && (
+            <ChecklistGroup
+              key={checklistArray.toString()}
+              checklistIdx={checklistIdx}
+              lastIdx={bdsmChecklistArray.length}
+              handleChangeChecklistIdx={handleChangeChecklistIdx}
+              groupName={groupName}
+              typeArray={typeArray}
+              checklistArray={checklistArray}
+              handleChange={
+                (
+                  { isMe, value, type }: { isMe: boolean, value: number, type: BDSMType },
+                ) => handleChangeChecklist({
+                  isMe, value, checklist, type,
+                })
+              }
+            />
+          )
         ))
       }
     </Page>
