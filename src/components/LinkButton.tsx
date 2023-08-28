@@ -1,5 +1,4 @@
-import { Button } from '@mui/material';
-import Link from 'next/link';
+import { Button, Link } from '@mui/material';
 
 export interface LinkButtonProps {
   href: string
@@ -8,13 +7,11 @@ export interface LinkButtonProps {
 
 export default function LinkButton({ href, name }: LinkButtonProps) {
   return (
-    <Button>
-      <Link href={{
-        pathname: href,
-      }}
-      >
-        {name}
-      </Link>
-    </Button>
+    <Link
+      component={Button}
+      href={href}
+    >
+      {name}
+    </Link>
   );
 }
