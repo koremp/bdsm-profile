@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Checkbox,
@@ -61,7 +63,7 @@ export default function Age() {
             >
               {
                 ageArray.map((value) => (
-                  <MenuItem value={value}>{value}</MenuItem>
+                  <MenuItem key={value} value={value}>{value}</MenuItem>
                 ))
               }
             </Select>
