@@ -4,12 +4,20 @@ import SexualPreferenceComponent from 'src/components/select/SexualPreference';
 export default function SexualPreferenceSelectProfilePage() {
   return (
     <Page
-      titleText="Profile Select - Sexual Preference"
+      titleText="Sexual Preference"
       bottom={{
-        backHref: '/profile/select',
-        backName: 'Back',
-        nextHref: '/profile/select/monopoly-relationship',
-        nextName: 'Monopoly Relationship',
+        back: {
+          href: '/profile/select/romantic-preference',
+          name: 'Romantic Preference',
+        },
+        middle: {
+          href: '/profile/select',
+          name: 'Back',
+        },
+        next: {
+          href: '/profile/select/monopoly-relationship',
+          name: 'Monopoly Relationship',
+        },
       }}
     >
       <SexualPreferenceComponent />

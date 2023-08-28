@@ -4,12 +4,20 @@ import Page from 'src/components/Page';
 export default function BDSMSelectProfilePage() {
   return (
     <Page
-      titleText="Profile Select - BDSM"
+      titleText="BDSM"
       bottom={{
-        backHref: '/profile/select',
-        backName: 'Back',
-        nextHref: '/profile/select/power-exchange',
-        nextName: 'Power Exchange',
+        back: {
+          href: '/profile/select/monopoly-relationship',
+          name: 'Monopoly Relationship',
+        },
+        middle: {
+          href: '/profile/select',
+          name: 'Back',
+        },
+        next: {
+          href: '/profile/select/power-exchange',
+          name: 'Power Exchange',
+        },
       }}
     >
       <BDSMComponent />

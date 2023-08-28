@@ -1,3 +1,5 @@
+'use client';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { erogenousArray } from 'src/types/bdsm/Erogenous';
@@ -54,7 +56,7 @@ export interface Item {
   checklist: BDSMChecklist
 }
 
-export default function BDSMChecklistComponent() {
+export default function BDSMChecklistPage() {
   const dispatch = useDispatch();
 
   const erogenous = useSelector(getChecklistErogenous);
@@ -199,10 +201,18 @@ export default function BDSMChecklistComponent() {
     <Page
       titleText="Profile Select - BDSM Checklist"
       bottom={{
-        backHref: '/profile/select',
-        backName: 'Back',
-        nextHref: '/profile/result',
-        nextName: 'Result',
+        back: {
+          href: '/profile/',
+          name: '/profile/',
+        },
+        middle: {
+          href: '/profile/select',
+          name: 'back',
+        },
+        next: {
+          href: '/profile/result',
+          name: 'Result',
+        },
       }}
     >
       {
@@ -213,6 +223,7 @@ export default function BDSMChecklistComponent() {
           checklist,
         }) => (
           <ChecklistGroup
+            key={checklistArray.toString()}
             groupName={groupName}
             typeArray={typeArray}
             checklistArray={checklistArray}

@@ -4,12 +4,20 @@ import GenderComponent from 'src/components/select/Gender';
 export default function GenderSelectProfilePage() {
   return (
     <Page
-      titleText="Profile Select - Gender"
+      titleText="Gender"
       bottom={{
-        backHref: '/profile/select',
-        backName: 'Back',
-        nextHref: '/profile/select/romantic-preference',
-        nextName: 'Romantic Preference',
+        back: {
+          href: 'profile/select/gender',
+          name: 'Gender',
+        },
+        middle: {
+          href: '/profile/select',
+          name: 'Back',
+        },
+        next: {
+          href: '/profile/select/romantic-preference',
+          name: 'Romantic Preference',
+        },
       }}
     >
       <GenderComponent />
