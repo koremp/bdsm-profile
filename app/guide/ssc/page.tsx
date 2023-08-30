@@ -7,10 +7,15 @@ export default function SSCGuidePage() {
     <Page
       titleText="SSC"
       bottom={{
-        backHref: '/guide',
-        backName: 'Back',
-        nextHref: '/guide/rack',
-        nextName: 'RACK',
+        back: {
+          href: '/guide',
+          name: 'Back',
+        },
+        middle: undefined,
+        next: {
+          href: '/guide/rack',
+          name: 'RACK',
+        },
       }}
     >
       <Typography>{ssc}</Typography>

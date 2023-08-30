@@ -7,10 +7,18 @@ export default function RACKGuidePage() {
     <Page
       titleText="RACK"
       bottom={{
-        backHref: '/guide',
-        backName: 'Back',
-        nextHref: '/guide/prick',
-        nextName: 'PRICK',
+        back: {
+          href: '/guide/ssc',
+          name: 'SSC',
+        },
+        middle: {
+          href: '/guide',
+          name: 'Back',
+        },
+        next: {
+          href: '/guide/prick',
+          name: 'PRICK',
+        },
       }}
     >
       <Typography>{rack}</Typography>

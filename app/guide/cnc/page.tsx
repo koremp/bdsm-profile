@@ -7,10 +7,18 @@ export default function CNCGuidePage() {
     <Page
       titleText="CNC"
       bottom={{
-        backHref: '/guide',
-        backName: 'Back',
-        nextHref: '/guide/cccc',
-        nextName: 'CCCC',
+        back: {
+          href: '/guide/prick',
+          name: 'PRICK',
+        },
+        middle: {
+          href: '/guide',
+          name: 'Back',
+        },
+        next: {
+          href: '/guide/cccc',
+          name: 'CCCC',
+        },
       }}
     >
       <Typography>{cnc}</Typography>

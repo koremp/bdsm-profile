@@ -1,4 +1,5 @@
 import { ButtonGroup, Typography } from '@mui/material';
+import { deepPurple } from '@mui/material/colors';
 import Page from 'src/components/Page';
 import LinkButton from 'src/components/LinkButton';
 import { cccc } from 'src/constants/guides';
@@ -13,7 +14,17 @@ export default function CCCCGuidePage() {
         aria-label="bottom button group"
       >
         <Typography>{cccc}</Typography>
-        <LinkButton href="/guide" name="Back" />
+        <ButtonGroup
+          variant="outlined"
+          aria-label="bottom button group"
+          fullWidth
+          sx={{
+            mt: 'auto',
+            backgroundColor: deepPurple[100],
+          }}
+        >
+          <LinkButton href="/guide" name="Back" />
+        </ButtonGroup>
       </ButtonGroup>
     </Page>
   );

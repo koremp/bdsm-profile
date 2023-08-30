@@ -7,10 +7,18 @@ export default function PRICKGuidePage() {
     <Page
       titleText="PRICK"
       bottom={{
-        backHref: '/guide',
-        backName: 'Back',
-        nextHref: '/guide/cnc',
-        nextName: 'CNC',
+        back: {
+          href: '/guide/rack',
+          name: 'RACK',
+        },
+        middle: {
+          href: '/guide',
+          name: 'Back',
+        },
+        next: {
+          href: '/guide/cnc',
+          name: 'CNC',
+        },
       }}
     >
       <Typography>{prick}</Typography>
