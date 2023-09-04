@@ -62,8 +62,6 @@ module.exports = {
     'layout',
     'page',
 
-    'styles.',
-
     'constants',
     'features',
     'types',
