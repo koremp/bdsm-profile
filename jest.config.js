@@ -55,12 +55,19 @@ module.exports = {
     'hooks.ts',
     'store.ts',
 
-    '_document.tsx',
-    '_app.tsx',
-    '_error.tsx',
+    '_error',
 
-    '404.tsx',
-    '500.tsx',
+    '404',
+    '500',
+    'layout',
+    'page',
+
+    'styles.',
+
+    'constants',
+    'features',
+    'types',
+    'utils',
   ],
   coveragePathIgnorePatterns: [
     '/node_modules/',
@@ -74,14 +81,19 @@ module.exports = {
     'hooks.ts',
     'store.ts',
 
-    '_document.tsx',
-    '_app.tsx',
-    '_error.tsx',
+    '_error',
 
-    '404.tsx',
-    '500.tsx',
+    '404',
+    '500',
+    'layout',
+    'page'
 
     'styles.',
+
+    'constants',
+    'features',
+    'types',
+    'utils',
   ],
   coverageThreshold: {
     global: {
