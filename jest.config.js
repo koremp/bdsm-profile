@@ -84,14 +84,12 @@ module.exports = {
     '404',
     '500',
     'layout',
-    'page'
+    'page',
 
-    'styles.',
-
-    'constants',
-    'features',
-    'types',
-    'utils',
+    '/src/constants/',
+    '/src/features/',
+    '/src/types/',
+    '/src/utils/',
   ],
   coverageThreshold: {
     global: {
